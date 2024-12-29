@@ -6,7 +6,7 @@ const page = () => {
   return (
 
     <div className='p-3 bg-white box-border'>
-      <div className='fixed top-[5%] left-[5%]'>
+      <div className='absolute md:fixed top-[5%] left-[5%]'>
         <Whitelogo />
       </div>
       <App />
