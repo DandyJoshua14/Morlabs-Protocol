@@ -4,7 +4,7 @@ import "../globals.css";
 const page = () => {
   return (
 
-    <div className='md:p-3 bg-white box-border'>
+    <div className='p-3 bg-white box-border'>
         <Layout />     
     </div>
 
