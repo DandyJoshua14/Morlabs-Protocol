@@ -35,7 +35,7 @@ const App = () => {
     };
 
     return (
-        <div className='relative w-[95vw] md:w-[100%] lg:ml-10 mt-24 lg:mt-10 bg-white text-[#000000] px-[40px] flex flex-col justify-center items-center lg:items-start'>
+        <div className='relative lg:ml-10 mt-24 lg:mt-10 bg-white text-[#000000] px-[40px] flex flex-col justify-center items-center lg:items-start'>
             {showToaster && (
                 <div className='absolute top-5 right-5 bg-blue-500 text-white px-4 py-2 rounded'>
                     Account created successfully
@@ -48,7 +48,7 @@ const App = () => {
                 Already have an account? <Link href='/login'><span className='text-[#1ab479] cursor-pointer'>Login</span></Link>
             </p>
 
-            <form onSubmit={handleSubmit} className='mt-[30px] flex flex-col items-center lg:items-start space-y-[16px] p-2 md:w-full w-full'>
+            <form onSubmit={handleSubmit} className='mt-[30px] flex flex-col items-center lg:items-start space-y-[16px] p-2 md:w-full w-[90vw]'>
                 <input placeholder='username' type="text" className='border rounded-md px-[24px] py-[16px] text-[#94a3b8] border-[#cbd5e1] bg-transparent w-full lg:w-[600px] h-[53px] box-border' />
                 <input placeholder='Email' type="text" className='border rounded-md px-[24px] py-[16px] border-[#cbd5e1] bg-transparent text-[#94a3b8] w-full lg:w-[600px] h-[53px] box-border' />
                 <div className='relative w-full lg:w-[600px]'>
