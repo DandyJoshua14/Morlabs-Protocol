@@ -1,3 +1,12 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://morlabsprotocol.com"),
+  keywords: ["morlabs", "morlabs protocol", "api and sdk", "best api and sdk", "transition from web2 to web3"],
+  title: { default: "Morlabs Protocol", template: `%s | Morlabs Protocol` },
+  openGraph: { description: "An API & SDK directory for developers" },
+};
+
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
