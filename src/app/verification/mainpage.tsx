@@ -36,11 +36,16 @@ const App = () => {
             e.target.style.fontWeight = 'normal';
             e.target.style.fontSize = '16px';
             e.target.value = '';
-            const prevSibling = document.querySelectorAll('input')[index - 1] as HTMLInputElement;
-            if (prevSibling) {
-                prevSibling.focus();
-            }
         }
+    };
+
+    const handleResendCode = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        setIsLoading(true);
+        setTimeout(() => {
+            setIsLoading(false);
+            // Add logic to resend the verification code here
+        }, 3000);
     };
 
     useEffect(() => {
@@ -49,7 +54,7 @@ const App = () => {
             setTimeout(() => {
                 setIsLoading(false);
                 router.push('/authenticated');
-            }, 3000);
+            }, 1000);
         }
     }, [code, router]);
 
@@ -79,7 +84,7 @@ const App = () => {
                 </div>
                 <button
                     className='rounded-md hover:bg-green-700 bg-[#1ab479] px-[24px] py-[16px] border-none text-white w-full lg:w-[480px] h-[50px] box-border mt-[40px]'
-                    onClick={(e) => e.preventDefault()}
+                    onClick={handleResendCode}
                     disabled={isLoading}
                 >
                     {isLoading ? (

@@ -31,7 +31,7 @@ const App = () => {
             setIsLoading(false);
             setShowToaster(false);
             router.push('/login');
-        }, 3000);
+        }, 1000);
     };
 
     return (

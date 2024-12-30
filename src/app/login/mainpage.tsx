@@ -23,7 +23,7 @@ const App = () => {
         setTimeout(() => {
             setIsLoading(false);
             router.push('/verification');
-        }, 2000);
+        }, 1000);
     };
 
     return (
