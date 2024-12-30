@@ -6,10 +6,10 @@ const SideNav = () => {
         <div className='md:h-[97vh] h-[100vh] w-[100%] bg-black px-10 pb-5 relative md:rounded-lg text-white box-border p-10 flex flex-col md:items-start'>
             <div className='flex items-center justify-between w-full space-x-4'>
                 <Logo />
-                <button className='text-[#cbd5e1] lg:h-[45px] h-[35px] text-[0.8rem] lg:text-[0.9rem] w-[100px] lg:w-[150px] hover:bg-[#cbd5e1] hover:text-black border-[1px] rounded-[40px] border-[#cbd5e1] hover:border-none bg-transparent'>
+                <Link href='/'><button className='text-[#cbd5e1] lg:h-[45px] h-[35px] text-[0.8rem] lg:text-[0.9rem] w-[100px] lg:w-[150px] hover:bg-[#cbd5e1] hover:text-black border-[1px] rounded-[40px] border-[#cbd5e1] hover:border-none bg-transparent'>
                    <span className='hidden lg:inline'>Back to Website</span>
                    <span className='lg:hidden'>Website</span>
-                </button>
+                </button></Link>
             </div>
             <div className='flex justify-center flex-col items-center absolute bottom-10 left-1/2 transform -translate-x-1/2'>
             <div className='flex flex-col justify-center items-center'>
