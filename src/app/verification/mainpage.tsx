@@ -43,6 +43,15 @@ const App = () => {
         }
     };
 
+    const handleResendCode = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        setIsLoading(true);
+        setTimeout(() => {
+            setIsLoading(false);
+            // Add logic to resend the verification code here
+        }, 3000);
+    };
+
     useEffect(() => {
         if (code.every((digit) => digit !== '')) {
             setIsLoading(true);
@@ -79,7 +88,7 @@ const App = () => {
                 </div>
                 <button
                     className='rounded-md hover:bg-green-700 bg-[#1ab479] px-[24px] py-[16px] border-none text-white w-full lg:w-[480px] h-[50px] box-border mt-[40px]'
-                    onClick={(e) => e.preventDefault()}
+                    onClick={handleResendCode}
                     disabled={isLoading}
                 >
                     {isLoading ? (

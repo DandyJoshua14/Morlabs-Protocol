@@ -49,9 +49,9 @@ const App = () => {
             </p>
 
             <form onSubmit={handleSubmit} className='mt-[30px] flex flex-col items-center lg:items-start space-y-[16px] p-2 md:w-full w-[90vw]'>
-                <input placeholder='username' type="text" className='border rounded-md px-[24px] py-[16px] text-[#94a3b8] border-[#cbd5e1] bg-transparent w-full lg:w-[600px] h-[53px] box-border' />
-                <input placeholder='Email' type="text" className='border rounded-md px-[24px] py-[16px] border-[#cbd5e1] bg-transparent text-[#94a3b8] w-full lg:w-[600px] h-[53px] box-border' />
-                <div className='relative w-full lg:w-[600px]'>
+                <input placeholder='username' type="text" className='border rounded-md px-[24px] py-[16px] text-[#94a3b8] border-[#cbd5e1] bg-transparent w-full lg:w-[100%] xl:w-[600px] h-[53px] box-border' />
+                <input placeholder='Email' type="text" className='border rounded-md px-[24px] py-[16px] border-[#cbd5e1] bg-transparent text-[#94a3b8] w-full lg:w-[100%] xl:w-[600px] h-[53px] box-border' />
+                <div className='relative w-full lg:w-[100%] xl:w-[600px]'>
                     <input placeholder='Enter your password' type={showPassword ? "text" : "password"} className='border bg-transparent rounded-md px-[24px] py-[16px] border-[#cbd5e1] text-[#94a3b8] w-full h-[56px] box-border' />
                     {showPassword ? (
                         <GoEye onClick={togglePasswordVisibility} className='absolute right-4 top-4 cursor-pointer' />
@@ -59,7 +59,7 @@ const App = () => {
                         <PiEyeClosedThin onClick={togglePasswordVisibility} className='absolute right-4 top-4 cursor-pointer' />
                     )}
                 </div>
-                <div className='relative w-full lg:w-[600px]'>
+                <div className='relative w-full lg:w-[100%] xl:w-[600px]'>
                     <input placeholder='confirm password' type={showConfirmPassword ? "text" : "password"} className='border bg-transparent rounded-md px-[24px] py-[16px] border-[#cbd5e1] text-[#94a3b8] w-full h-[53px] box-border' />
                     {showConfirmPassword ? (
                         <GoEye onClick={toggleConfirmPasswordVisibility} className='absolute right-4 top-4 cursor-pointer' />
@@ -73,7 +73,7 @@ const App = () => {
                 </div>
 
                 <button
-                    className='green-button'
+                    className='green-button lg:w-[100%] xl:w-[600px]'
                     type="submit"
                     disabled={isLoading}
                 >
