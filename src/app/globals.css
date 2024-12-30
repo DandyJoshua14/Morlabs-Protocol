@@ -33,3 +33,18 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* Blue button */
+.blue-button {
+  background-color: #0088cc;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.blue-button:hover {
+  background-color: #0077b3;
+}

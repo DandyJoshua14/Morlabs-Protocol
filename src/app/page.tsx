@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Logo from './_Components/Logo';
+import './globals.css'; // Ensure this file contains the new blue-button class
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <main className="text-white text-2xl font-bold flex flex-col gap-8 row-start-2 items-center sm:items-start">
         Morlabs Protocol is in development...
         <Link href="https://t.me/+h3znet1BenA4OWI0">
-          <button style={{ backgroundColor: 'blue', color: 'white' }} className='green-button flex justify-center items-center'>
+          <button className='blue-button flex justify-center items-center'>
             Join telegram
           </button>
         </Link>
@@ -20,7 +21,6 @@ export default function Home() {
               Start unboarding
             </button>
           </Link>
-
         </div>
       </main>
     </div>
