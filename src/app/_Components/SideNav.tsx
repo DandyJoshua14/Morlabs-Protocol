@@ -11,7 +11,7 @@ const SideNav = () => {
                    <span className='lg:hidden'>Website</span>
                 </button></Link>
             </div>
-            <div className='flex justify-center flex-col items-center absolute bottom-10 left-1/2 transform -translate-x-1/2'>
+            <div className='flex justify-center flex-col items-center absolute bottom-20 md:bottom-10 left-1/2 transform -translate-x-1/2'>
             <div className='flex flex-col justify-center items-center'>
                     <p className='text-white text-center w-[100%] md:text-[28px] lg:text-[32px] text-[32px] whitespace-nowrap'>
                         Understanding Web3,
