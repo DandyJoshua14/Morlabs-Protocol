@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { Montserrat, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import ClientLayout from './ClientLayout';
 
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700","800"], 
 });
 
-export const robotoMono = Roboto_Mono({
+const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
   subsets: ["latin"],
 });
@@ -31,9 +30,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${robotoMono.variable} antialiased`}
       >
-        <ClientLayout>
-          {children}
-        </ClientLayout>
+        {children}
       </body>
     </html>
   );
