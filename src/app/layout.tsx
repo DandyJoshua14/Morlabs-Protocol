@@ -6,7 +6,7 @@ import "./globals.css";
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700","800"], 
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const robotoMono = Roboto_Mono({
@@ -14,12 +14,7 @@ const robotoMono = Roboto_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://morlabsprotocol.com"),
-  keywords: ["morlabs", "morlabs protocol", "api and sdk", "best api and sdk", "transition from web2 to web3"],
-  title: { default: "Morlabs Protocol", template: `%s | Morlabs Protocol` },
-  openGraph: { description: "An API & SDK directory for developers" },
-};
+
 
 export default function RootLayout({
   children,
