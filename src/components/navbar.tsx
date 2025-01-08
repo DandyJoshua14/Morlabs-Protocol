@@ -42,7 +42,7 @@ const Navbar = () => {
     <div className="w-[100%] flex justify-center items-center">
       <div className=" w-full md:w-[87%] flex top-0 z-50 border-0 fixed">
         {/* MOBILE VIEW NAV BAR */}
-        <div className="navbar text-white py-3 lg:hidden items-center" style={{ background: 'radial-gradient(circle, #195B41, #101916)' }}>
+        <div className="navbar text-white py-3 lg:hidden items-center" style={{ background: 'black' }}>
           <div className="lg:hidden">
             <div className="dropdown flex justify-evenly w-[100vw] items-center lg:hidden">
 
@@ -131,19 +131,31 @@ const Navbar = () => {
         {/* MOBILE NAV BAR ENDS HERE */}
 
         {/* WEB RESPONSIVENESS */}
-        <div className="navbar text-white py-3 hidden lg:flex rounded-b-[35px] px-10 items-center" style={{ background: 'radial-gradient(circle, #195B41, #101916)' }}>
+        <div className="navbar text-white py-3 hidden lg:flex rounded-b-[35px] px-10 items-center" style={{ background: 'black' }}>
           <div className="navbar-start">
             <Link className="btn mt-5 btn-ghost hidden lg:block text-xl ml-5" href="/">
               <Image alt="morlabs_logo" width={150} height={50} src="/logos/morlabs-logo.svg" />
             </Link>
           </div>
+          <div className="navbar-end">
           <div className="navbar-center hidden lg:flex ">
+         
             <ul className="menu menu-horizontal px-1">
+            <li>
+                <Link href="/signup-form" className="font-medium flex items-center"
+                  style={{ color: "white" }}>
+
+                  About Us
+
+
+                </Link>
+
+              </li>
               <li>
                 <details>
                   <summary className="font-medium flex items-center"
                     style={{ color: "white" }}>
-                    For Developers
+                    Features
 
                   </summary>
                   <ul className="p-2 bg-black text-white">
@@ -154,6 +166,16 @@ const Navbar = () => {
                     <li><Link href="#">Publish your API</Link></li>
                   </ul>
                 </details></li>
+                <li>
+                <Link href="/signup-form" className="font-medium flex items-center"
+                  style={{ color: "white" }}>
+
+                  How It Works
+
+
+                </Link>
+
+              </li>
 
 
               <li>
@@ -167,23 +189,12 @@ const Navbar = () => {
 
               </li>
 
-              <li>
-                <Link href="/signup-form" className="font-medium flex items-center"
-                  style={{ color: "white" }}>
-
-                  About Us
-
-
-                </Link>
-
-              </li>
-
 
             </ul>
 
           </div>
-          <div className="navbar-end">
-            <button className="rounded-[30px] text-white hover:border-gray-700 border-white border-[0.5px] py-3 hidden lg:block lg:px-5 hover:bg-gray-700">Connect wallet</button>
+          
+            {/* <button className="rounded-[30px] text-white hover:border-gray-700 border-white border-[0.5px] py-3 hidden lg:block lg:px-5 hover:bg-gray-700">Connect wallet</button> */}
           </div>
         </div>
         {/* END OF WEB RESPONSIVENESS */}

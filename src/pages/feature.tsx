@@ -21,6 +21,9 @@ import { FaNetworkWired, FaLock, FaUserShield, FaFileContract, FaRocket, FaListA
 import { FaEthereum, FaBitcoin } from 'react-icons/fa';
 import { SiSolana, SiPolkadot, SiChainlink } from 'react-icons/si';
 
+// import { CheckCircleIcon } from '@heroicons/react/solid';
+import Link from "next/link";
+
 const ApiProviders = () => {
   const providers = [
     { name: 'Ethereum', icon: <FaEthereum />, link: '#ethereum' },
@@ -55,17 +58,7 @@ const ApiProviders = () => {
 
 
 
-        {/* {providers.map((provider, index) => (
-          <div
-            key={index}
-            className="bg-green-500 hover:bg-green-900 p-6 rounded-lg text-center transition-colors duration-300 ease-in-out"
-          >
-            <div className="text-4xl mb-4 text-white flex justify-center">
-              {provider.icon}
-            </div>
-            <p className="text-lg text-white font-bold">+{provider.name}</p>
-          </div>
-        ))} */}
+       
       </div>
     </div>
   );
@@ -168,6 +161,14 @@ export const BenefitsCarousel = () => {
   );
 }
 
+
+  // const featuresList = [
+  //   'Ready-to-use APIs for faster coding.',
+  //   'AI recommendations to streamline your workflow.',
+  //   'SDKs designed for seamless dApp integration.',
+  //   'Built on Solana for unmatched speed and scalability.',
+  // ];
+
 const FEATURES = [
   {
     icon: CursorArrowRaysIcon,
@@ -199,16 +200,69 @@ export function Features() {
   return (
     <section className="pt-10 pb-2 px-4 w-full overflow-hidden">
       <div className="container mx-auto mb-25 text-center">
-        <h2 className="text-white mb-2 font-bold uppercase text-3xl">Your Developer Dashboard</h2>
-        <h1 className="text-white mb-4 text-lg">
-          Simplifying the integrations of APIs <br /> into Web3 Projects
-        </h1>
+        <h2 className="text-white mb-2 font-bold uppercase text-3xl">Building on Web3 <br /> should'nt be a rocket science</h2>
+        {/* <h1 className="text-white mb-4 text-lg">
+          Morlabs is an AI-Powered APk and SDK directory <br /> helping developer bulid and intergrate faster on Web3
+        </h1> */}
         <p className="text-white text-sm mx-auto w-full px-4 lg:w-11/12 lg:px-8 py-3">
-          Manage Your APIs, SDKs, and Projects in One Place. View all your Web3 projects, track
-          progress, and access your integrations...
+          Developers waste hours hunting for the right tools, struggling with integrations, <br /> and navigating the steep learning curve of Web3 development. 
+          <br /> The result? Slow progress, frustration, and missed opportunities.
         </p>
 
       </div>
+
+
+
+      <div className="flex justify-center flex-col items-center">
+      <div className="flex justify-center flex-col items-center mx-5 py-20 bg-white rounded-[46px] max-w-3xl p-8">
+
+    
+<h1 className="text-black mb-3 text-center text-3xl font-bold w-[90%] lg:w-[50%]">Leave the rocket science to NASA. We’ve got Web3 covered
+</h1>
+<p className="text-black text-lg font-normal lg:w-5/14 m-4 text-center w-[90%] lg:w-[55%]">
+MorLabs Protocol simplifies Web3 development with high-performance tools that save time, reduce friction, and help you build faster.
+</p>
+{/* <ul className="space-y-4">
+      {featuresList.map((featuresList, index) => (
+        <li key={index} className="flex items-start space-x-3">
+          <CheckCircleIcon className="h-6 w-6 text-green-700" />
+          <p className="text-lg text-gray-800">{featuresList}</p>
+        </li>
+      ))}
+    </ul> */}
+
+
+</div>
+    </div>
+    <div className="mt-16 flex flex-col items-center justify-center gap-y-4 gap-x-8 border-t border-b border-white rounded-t-[46px] rounded-b-[46px] max-w-6xl mx-auto px-16 py-14">
+        <div className="text-center text-white text-lg font-normal">
+         
+          <h1 className="text-white bold">Learn</h1>
+
+        </div>
+      </div>
+      <div className="mt-16 flex flex-col items-center justify-center gap-y-4 gap-x-8 border-t border-b border-white rounded-t-[46px] rounded-b-[46px] max-w-6xl mx-auto px-16 py-14">
+        <div className="text-center text-white text-lg font-normal">
+         
+          <h1 className="text-white bold">Test</h1>
+
+        </div>
+      </div>
+      <div className="mt-16 flex flex-col items-center justify-center gap-y-4 gap-x-8 border-t border-b border-white rounded-t-[46px] rounded-b-[46px] max-w-6xl mx-auto px-16 py-14">
+        <div className="text-center text-white text-lg font-normal">
+         
+          <h1 className="text-white bold">Integrate</h1>
+
+        </div>
+      </div>
+      <div className="mt-16 flex flex-col items-center justify-center gap-y-4 gap-x-8 border-t border-b border-white rounded-t-[46px] rounded-b-[46px] max-w-6xl mx-auto px-16 py-14">
+        <div className="text-center text-white text-lg font-normal">
+         
+          <h1 className="text-white bold">Deploy</h1>
+
+        </div>
+      </div>
+
       <BenefitsCarousel />
 
 

@@ -13,8 +13,3 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default Layout;
 
 
-/*
-What's up, why did you undo?? i thou its a mistake
-
-Oh okay, no I was removing it
-*/

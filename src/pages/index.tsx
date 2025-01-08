@@ -24,7 +24,7 @@ export default function Home() {
   ];
   return (
     <>
-      <div className="bg-[radial-gradient(circle_at_top,_#195B41,_black_60%)] w-full overflow-hidden min-h-screen">
+      <div className="bg-[black] w-full overflow-hidden min-h-screen">
         <Navbar />
         <Hero />
       </div>
@@ -61,21 +61,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* </div> */}
+       
 
-
-
-            {/* {providers.map((provider, index) => (
-          <div
-            key={index}
-            className="bg-green-500 hover:bg-green-900 p-6 rounded-lg text-center transition-colors duration-300 ease-in-out"
-          >
-            <div className="text-4xl mb-4 text-white flex justify-center">
-              {provider.icon}
-            </div>
-            <p className="text-lg text-white font-bold">+{provider.name}</p>
-          </div>
-        ))} */}
           </div>
         </div>
 

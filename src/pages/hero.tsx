@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { FaEthereum, FaBitcoin, FaLinkedin, FaGithub } from 'react-icons/fa'; // Placeholder icons
 import { SiSolana, SiPolkadot, SiChainlink } from 'react-icons/si'; // Web3 specific icons
 
+import { CreditCardIcon, CubeIcon, GlobeAltIcon, LinkIcon, ServerIcon, ChartBarIcon } from '@heroicons/react/outline';
+
 
 
 
@@ -149,12 +151,12 @@ function Hero() {
           <div className="col-span-1">
 
 
-            <h1 className="text-4xl lg:text-6xl font-bold mb-4 mt-0 lg:mt-24 text-white">
-              Your Gateway to Seamless <br />
-              Web3 Integration
+            <h1 className="text-2xl lg:text-4xl font-bold mb-4 mt-0 lg:mt-24 text-white">
+              One platform  <br />
+              All the tools you need to build in Webs3
             </h1>
-            <p className="text-xl font-semibold mb-8 text-white">
-              Accelerate Your Web3 Journey: <br />Explore, Build, and Scale With Our API Directory
+            <p className="mb-8 text-white">
+              Access ready to use API, SDK and AI Powered recommendations <br />for simplified development
             </p>
 
             <div className="">
@@ -162,7 +164,7 @@ function Hero() {
               <Link href="/signup-form" passHref>
                 <button
                   type="submit"
-                  className="p-2 border border-white bg-gree-500 font-semibold text-white rounded hover:bg-green-900"
+                  className="p-2 pl-6 pr-6 rounded-[46px]  bg-green-700 font-semibold text-white hover:bg-green-900"
                 >
                   {/* className="px-6 py-3 bg-green-800 rounded-full hover:bg-green-600 transition duration-300 text-white"style={{ backgroundColor: "#00FF99" }} */}
                   Join Waitlist
@@ -170,8 +172,57 @@ function Hero() {
               </Link>
 
             </div>
-            <p className="mt-6 text-md py-5 font-semibold">Trusted by 100+ B2B companies</p>
-            <TrustedCompanies />
+            {/* <TrustedCompanies />
+            <p className="mt-6 text-md py-5 font-semibold">Backed by the best in the web3 space</p> */}
+            
+
+            <div className="relative w-full flex justify-center pt-20">
+        <div className="relative w-[60%] h-[60%] flex justify-between items-center">
+          {/* Arc arrangement */}
+          <div className="absolute left-[5%] top-[10%]">
+            {/* <img src="/logos/moralis.png" alt="Moralis Logo" className="w-12 h-12" /> */}
+            <SiSolana className="w-12 h-12 text-green-700" />
+          </div>
+          <div className="absolute left-[15%] top-[85%]">
+            {/* <img src="/logos/thirdweb.png" alt="Thirdweb Logo" className="w-12 h-12" /> */}
+            <SiSolana className="w-12 h-12 text-green-700" />
+          </div>
+          <div className="absolute left-[30%]">
+            {/* <img src="/logos/quicknode.png" alt="QuickNode Logo" className="w-12 h-12" /> */}
+            <SiSolana className="w-12 h-12 text-green-700" />
+          </div>
+          <div className="absolute left-[50%] top-[5%]">
+            {/* <img src="/logos/nx.png" alt="Nx Logo" className="w-12 h-12" /> */}
+            <SiSolana className="w-12 h-12 text-green-700" />
+          </div>
+          <div className="absolute right-[30%]">
+            {/* <img src="/logos/walletconnect.png" alt="WalletConnect Logo" className="w-12 h-12" /> */}
+            <SiSolana className="w-12 h-12 text-green-700" />
+          </div>
+          <div className="absolute right-[15%] top-[5%]">
+            {/* <img src="/logos/web3auth.png" alt="Web3Auth Logo" className="w-12 h-12" /> */}
+            <SiSolana className="w-12 h-12 text-green-700" />
+          </div>
+          <div className="absolute right-[5%] top-[10%]">
+            {/* <img src="/logos/particle-network.png" alt="Particle Network Logo" className="w-12 h-12" /> */}
+            <SiSolana className="w-12 h-12 text-green-700" />
+          </div>
+        </div>
+      </div>
+
+      {/* Center Text */}
+      <div className="text-center mt-12">
+        <p className="text-lg">Backed by the best in the web3 space</p>
+      </div>
+
+      {/* Logos/Partners */}
+      <div className="flex items-center justify-center space-x-8 mt-6">
+        {/* <img src="/logos/solana.png" alt="Solana Logo" className="w-24" /> */}
+        <SiSolana className="w-24 h-12 text-green-700" />
+        {/* <img src="/logos/moralis-wallet.png" alt="Moralis Wallet Logo" className="w-8" /> */}
+        <SiSolana className="w-12 h-12 text-green-700" />
+      </div>
+
           </div>
 
         </div>

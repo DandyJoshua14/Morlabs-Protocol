@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
-    "@heroicons/react": "2.0.18",
+    "@heroicons/react": "^2.2.0",
     "axios": "^1.7.7",
     "daisyui": "^4.12.12",
     "next": "^14.2.13",

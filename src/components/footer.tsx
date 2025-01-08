@@ -19,41 +19,59 @@ const Footer = () => {
           </div>
 
           {/* Center Content */}
-          <div className="grid md:grid-cols-3 gap-4 p-3 md:p-1">
+          <div className="grid md:grid-cols-5 gap-4 p-3 md:p-1">
             {/* Column 1 */}
             <div className='p-3 md:p-1'>
-              <h3 className="font-bold mb-4">For Devs</h3>
-              <ul className="list-none space-y-2">
-                <li>Web2-to-Web3</li>
-                <li>Payments</li>
-                <li>DeFi</li>
-                <li>Gaming</li>
-
-              </ul>
+              <p className="font-bold mb-4">About</p>
+              
             </div>
             {/* Column 2 */}
             <div className='p-3 md:p-1'>
-              <h3 className="font-bold mb-4">Docs</h3>
-              <ul className="list-none space-y-2">
-                <li>Developer</li>
-                <li>API Interation</li>
-                <li>Solana Integration</li>
-                <li>Sandbox</li>
-              </ul>
+              <h3 className="font-bold mb-4">Features</h3>
+              
             </div>
             {/* Column 3 */}
             <div className='p-3 md:p-1'>
-              <h3 className="font-bold mb-4">Testing</h3>
-              <ul className="list-none space-y-2">
-                <li>DApp</li>
-                <li>Sandbox</li>
-              </ul>
+              <h3 className="font-bold mb-4">How It Works</h3>
+              
+            </div>
+            <div className='p-3 md:p-1'>
+              <h3 className="font-bold mb-4">Community</h3>
+              
+            </div>
+            <div className='p-3 md:p-1'>
+              <h3 className="font-bold mb-4">Whitepaper</h3>
+              
             </div>
           </div>
 
           {/* Right Side - Social Icons */}
           <div className="flex space-x-4 items-center">
-            <Link href="https://twitter.com/morlabs_">
+          <Link href="#" passHref>
+    <button
+      type="submit"
+      className="p-2 border-t border-[2px] border-r border-white bg-gree-500 text-white rounded hover:bg-green-600"
+    >
+     JoinWaitlist
+    </button>
+  </Link>
+            
+          </div>
+        </div>
+      </div>
+      <div className="md:flex md:justify-between items-center">
+      <div className="mt-3 flex flex-col gap-y-4 gap-x-8 py-3">
+        <div className=" text-white font-normal opacity-75">
+          <p className=" text-white text-sm">&copy; Morlabs {CURRENT_YEAR}. All rights reserved</p>
+
+
+          <p className="text-white text-sm"><Link href="" className='hover:underline'>Terms of Service</Link> & <Link href="" className='hover:underline'>Privacy Policy</Link></p>
+
+
+
+        </div>
+        <div className="flex space-x-4 items-center">
+        <Link href="https://twitter.com/morlabs_">
               <p className="text-white opacity-75 hover:opacity-100">
                 <i className="fa-brands fa-twitter text-2xl not-italic"></i>
               </p>
@@ -78,19 +96,8 @@ const Footer = () => {
                 <i className="fa-brands fa-dribbble text-2xl not-italic"></i>
               </p>
             </Link>
-          </div>
-        </div>
-      </div>
-      <div className="mt-16 flex flex-col items-center justify-center gap-y-4 gap-x-8 border-t border-white py-7">
-        <div className="text-center text-white font-normal opacity-75">
-          <p className=" text-white text-sm">&copy; Copyright Morlabs {CURRENT_YEAR}</p>
-
-
-          <p className="text-white text-sm"><Link href="" className='hover:underline'>Terms of Service</Link> & <Link href="" className='hover:underline'>Privacy Policy</Link></p>
-
-
-
-        </div>
+            </div>
+            </div>
       </div>
     </footer>
   );
