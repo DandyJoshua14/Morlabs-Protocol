@@ -162,12 +162,12 @@ export const BenefitsCarousel = () => {
 }
 
 
-  // const featuresList = [
-  //   'Ready-to-use APIs for faster coding.',
-  //   'AI recommendations to streamline your workflow.',
-  //   'SDKs designed for seamless dApp integration.',
-  //   'Built on Solana for unmatched speed and scalability.',
-  // ];
+  const featuresList = [
+    'Ready-to-use APIs for faster coding.',
+    'AI recommendations to streamline your workflow.',
+    'SDKs designed for seamless dApp integration.',
+    'Built on Solana for unmatched speed and scalability.',
+  ];
 
 const FEATURES = [
   {
@@ -217,19 +217,19 @@ export function Features() {
       <div className="flex justify-center flex-col items-center mx-5 py-20 bg-white rounded-[46px] max-w-3xl p-8">
 
     
-<h1 className="text-black mb-3 text-center text-3xl font-bold w-[90%] lg:w-[50%]">Leave the rocket science to NASA. We’ve got Web3 covered
+<h1 className="text-black mb-3 text-center text-4xl font-bold w-[90%] lg:w-[85%]">Leave the rocket science to NASA. We’ve got Web3 covered
 </h1>
-<p className="text-black text-lg font-normal lg:w-5/14 m-4 text-center w-[90%] lg:w-[55%]">
+<p className="text-black text-lg font-normal lg:w-5/14 m-4 text-center w-[90%] lg:w-[90%]">
 MorLabs Protocol simplifies Web3 development with high-performance tools that save time, reduce friction, and help you build faster.
 </p>
-{/* <ul className="space-y-4">
+<ul className="space-y-4">
       {featuresList.map((featuresList, index) => (
         <li key={index} className="flex items-start space-x-3">
-          <CheckCircleIcon className="h-6 w-6 text-green-700" />
+          <  CursorArrowRaysIcon className="h-6 w-6 text-green-700" />
           <p className="text-lg text-gray-800">{featuresList}</p>
         </li>
       ))}
-    </ul> */}
+    </ul>
 
 
 </div>
