@@ -35,7 +35,7 @@ const ApiProviders = () => {
 
   return (
     <div className="flex flex-col items-center py-10">
-      <h2 className="text-3xl font-bold mb-6 text-white py-5">Simplifying the integration of APIs into Web3 projects</h2>
+      <h2 className="text-3xl font-bold mb-6 text-white py-5">How it Works</h2>
       {/* <div className="grid grid-cols-1 md:grid-cols-5 gap-8"> */}
 
 
