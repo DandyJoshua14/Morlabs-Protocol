@@ -11,7 +11,7 @@ import Link from "next/link";
 export function VideoIntro() {
   return (
     <div className="flex justify-center flex-col items-center">
-      <div className="flex justify-center flex-col items-center mx-5 py-20 bg-gradient-to-br from-black via-green-700 to-teal-900 p-8 w-[100%]">
+      <div className="flex justify-center flex-col items-center mx-5 py-20 bg-[radial-gradient(circle_at_bottom,_#195B41,_black_60%)] p-8 w-[100%]">
 
     
 <h1 className="text-white mb-3 text-center text-3xl font-bold w-[90%] lg:w-[100%]">The future of Web3 development  is waiting. </h1>
