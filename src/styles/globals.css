@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import '@fontsource/poppins'; */
+
+  /* .gradient-text {
+    background: linear-gradient(90deg, #00FF94, #0bc67b, #FF8A65); /* Mostly green to subtle pink/red */
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  /* } */ 
+  /* .gradient-text {
+    background: linear-gradient(90deg, #00FF94, #0bc67b, #FF8A65); /* Mostly green to subtle pink/red */
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Optional fallback for non-webkit browsers */
+  /* } */ 
+
+  .gradient-text {
+    background: linear-gradient(90deg, #00FF94, #0bc67b, #FF8A65);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Optional for non-webkit browsers */
+  }
+
+  
