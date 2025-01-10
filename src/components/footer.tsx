@@ -59,8 +59,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="md:flex md:justify-between items-center">
-      <div className="mt-3 flex flex-col gap-y-4 gap-x-8 py-3">
+      
+      <div className="md:flex md:justify-between items-center py-3">
+      <div className="mt-3 flex flex-col gap-y-4">
         <div className=" text-white font-normal opacity-75">
           <p className=" text-white text-sm">&copy; Morlabs {CURRENT_YEAR}. All rights reserved</p>
 
@@ -70,6 +71,7 @@ const Footer = () => {
 
 
         </div>
+        </div>
         <div className="flex space-x-4 items-center">
         <Link href="https://twitter.com/morlabs_">
               <p className="text-white opacity-75 hover:opacity-100">
@@ -78,15 +80,17 @@ const Footer = () => {
             </Link>
             <Link href="#">
               <p className="text-white opacity-75 hover:opacity-100">
-                <i className="fa-brands fa-aedin text-2xl not-italic"></i>
+              <i className="fa-brands fa-telegram text-2xl not-italic"></i>
+
               </p>
             </Link>
             <Link href="#">
               <p className="text-white opacity-75 hover:opacity-100">
-                <i className="fa-brands fa-facebook text-2xl not-italic"></i>
+              <i className="fa-brands fa-linkedin text-2xl not-italic"></i>
+
               </p>
             </Link>
-            <Link href="#">
+            {/* <Link href="#">
               <p className="text-white opacity-75 hover:opacity-100">
                 <i className="fa-brands fa-github text-2xl not-italic"></i>
               </p>
@@ -95,10 +99,11 @@ const Footer = () => {
               <p className="text-white opacity-75 hover:opacity-100">
                 <i className="fa-brands fa-dribbble text-2xl not-italic"></i>
               </p>
-            </Link>
+            </Link> */}
             </div>
-            </div>
-      </div>
+          </div>
+          
+      
     </footer>
   );
 };
