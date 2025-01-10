@@ -1,12 +1,16 @@
 "use client";
 import React from "react";
+import { useState, useEffect  } from "react";
 
 import {
   CursorArrowRaysIcon,
+  DivideIcon,
   HeartIcon,
   LightBulbIcon,
   LockClosedIcon,
 } from "@heroicons/react/24/solid";
+
+import { FiArrowLeftCircle, FiArrowRightCircle  } from "react-icons/fi";
 
 import FeatureCard from "../components/feature-card";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,6 +26,7 @@ import { FaEthereum, FaBitcoin } from 'react-icons/fa';
 import { SiSolana, SiPolkadot, SiChainlink } from 'react-icons/si';
 
 // import { CheckCircleIcon } from '@heroicons/react/solid';
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 const ApiProviders = () => {
@@ -64,102 +69,128 @@ const ApiProviders = () => {
   );
 };
 
-export const BenefitsCarousel = () => {
+
+const WhyDev = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    {
+      bg: "bg-gradient-to-r from-purple-500 to-pink-500",
+      title: "Seamless Integration",
+      description: "Our tools are built for smooth deployment, letting you focus on innovation.",
+      image: "/images/slide1.png", // Update this path
+    },
+    {
+      bg: "bg-gradient-to-r from-purple-500 to-pink-500",
+      title: "Developer-Friendly SDKs",
+      description: "Get started quickly with prebuilt SDKs for faster development cycles.",
+      image: "/images/slide2.png", // Update this path
+    },
+    {
+      bg: "bg-gradient-to-r from-orange-500 to-red-500",
+      title: "Scalable Solutions",
+      description: "Build scalable applications with our AI-powered Web3 tools.",
+      image: "/images/slide3.png", // Update this path
+    },
+  ];
+
+  const slideCount = slides.length;
+
+  // Automatically transition to the next slide
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slideCount);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(timer); // Cleanup timer on unmount
+  }, [slideCount]);
+
+  // Go to the previous slide
+  const handlePrev = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + slideCount) % slideCount);
+  };
+
+  // Go to the next slide
+  const handleNext = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % slideCount);
+  };
+
+
+// export const BenefitsCarousel = () => {
   return (
-    <section className="bg-black text-white py-12">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Swiper Carousel */}
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 2, spaceBetween: 20 },
-            1024: { slidesPerView: 4, spaceBetween: 40 }
-          }}
-          loop={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false
-          }}
-          modules={[Autoplay]} // Add Autoplay as a module
-        >
-          {/* Benefit 1 - Fast SDK Integration */}
-          <SwiperSlide>
-            <div className="flex flex-col items-center text-center">
-              <FaRocket size={40} className="text-green-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Fast SDK Integration</h3>
+    <>
+    <div className=" mx-auto flex flex-col items-center px-5 py-10 text-white">
+        <h2 className="text-4xl font-bold text-center mb-8">Why developers need Morlabs</h2>
+    </div>
+    <div
+      className={`relative flex items-center w-[50%] mx-auto  ${slides[currentSlide].bg} text-white transition-all duration-500`}
+    >
+      
 
-              <p className="text-gray-400">Accelerate your development with ready-to-use SDK and pre-built modules for common Web3 functionalities.</p>
+        <div className="relative w-full h-96 flex items-center justify-center overflow-hidden">
+          {/* Slides */}
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute w-full h-[300px] flex items-center justify-center gap-8 transition-opacity duration-1000 ${
+                currentSlide === index ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {/* Alternating layout */}
+              {index % 2 === 0 ? (
+                <>
+                  <div className="w-1/2 flex flex-col justify-center">
+                    <h3 className="text-2xl font-bold mb-4">{slide.title}</h3>
+                    <p className="text-lg">{slide.description}</p>
+                  </div>
+                  <div className="w-1/2 h-full flex items-center justify-center">
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="h-full object-cover rounded-lg"
+                    />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="w-1/2 h-full flex items-center justify-center">
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="h-full object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="w-1/2 flex flex-col justify-center">
+                    <h3 className="text-2xl font-bold mb-4">{slide.title}</h3>
+                    <p className="text-lg">{slide.description}</p>
+                  </div>
+                </>
+              )}
             </div>
-          </SwiperSlide>
+          ))}
 
-          {/* Benefit 2 - Comprehensive API Directory */}
-          <SwiperSlide>
-            <div className="flex flex-col items-center text-center">
-              <FaListAlt size={40} className="text-green-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Comprehensive API Directory</h3>
-              <p className="text-gray-400">Explore a wide range of APIs, organized by domain, for seamless integration into your Web3 projects.</p>
-            </div>
-          </SwiperSlide>
+          {/* Arrows */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-0 z-10 top-1/2 transform -translate-y-1/2 p-2 rounded-full hover:bg-black bg-opacity-70 transition"
+          >
+            <FiArrowLeftCircle size={60} className="text-white" /> {/* Left arrow */}
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full hover:bg-black bg-opacity-70 transition"
+          >
+            <FiArrowRightCircle size={60} className="text-white" /> {/* Right arrow */}
+          </button>
+        </div>
 
-          {/* Benefit 3 - AI-Powered Search */}
-          <SwiperSlide>
-            <div className="flex flex-col items-center text-center">
-              <FaSearch size={40} className="text-green-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">AI-Powered Search</h3>
-              <p className="text-gray-400">Leverage AI to quickly find the APIs you need, with personalized recommendations based on your project requirements.</p>
-            </div>
-          </SwiperSlide>
-
-          {/* Benefit 4 - Testing Environment */}
-          <SwiperSlide>
-            <div className="flex flex-col items-center text-center">
-              <FaFlask size={40} className="text-green-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Testing Environment</h3>
-              <p className="text-gray-400">Test your APIs in a dedicated sandbox environment before going live.</p>
-            </div>
-          </SwiperSlide>
-
-          {/* Benefit 5 - Decentralization */}
-          <SwiperSlide>
-            <div className="flex flex-col items-center text-center">
-              <FaNetworkWired size={40} className="text-green-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Decentralization</h3>
-              <p className="text-gray-400">Decentralized networks reduce the need for intermediaries, enhancing security and control.</p>
-            </div>
-          </SwiperSlide>
-
-          {/* Benefit 6 - Smart Contracts */}
-          <SwiperSlide>
-            <div className="flex flex-col items-center text-center">
-              <FaFileContract size={40} className="text-green-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Smart Contracts</h3>
-              <p className="text-gray-400">Self-executing contracts reduce the need for manual interventions and increase automation.</p>
-            </div>
-          </SwiperSlide>
-
-          {/* Benefit 7 - User Sovereignty */}
-          <SwiperSlide>
-            <div className="flex flex-col items-center text-center">
-              <FaUserShield size={40} className="text-green-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">User Sovereignty</h3>
-              <p className="text-gray-400">Give users control over their digital identity and assets with true ownership.</p>
-            </div>
-          </SwiperSlide>
-
-          {/* Benefit 8 - Transparency & Security */}
-          <SwiperSlide>
-            <div className="flex flex-col items-center text-center">
-              <FaLock size={40} className="text-green-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Transparency & Security</h3>
-              <p className="text-gray-400">Blockchain’s immutability ensures data integrity, transparency, and security.</p>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+    
+       
       </div>
-    </section>
+    {/* // </div> */}
+    </>
   );
-}
+};
+
 
 
   const featuresList = [
@@ -263,7 +294,7 @@ MorLabs Protocol simplifies Web3 development with high-performance tools that sa
         </div>
       </div>
 
-      <BenefitsCarousel />
+      <WhyDev />
 
 
     </section>
