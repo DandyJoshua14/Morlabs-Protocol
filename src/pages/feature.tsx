@@ -28,6 +28,7 @@ import { SiSolana, SiPolkadot, SiChainlink } from 'react-icons/si';
 // import { CheckCircleIcon } from '@heroicons/react/solid';
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Howitworks from "./howitworks";
 
 const ApiProviders = () => {
   const providers = [
@@ -62,10 +63,10 @@ const ApiProviders = () => {
         {/* </div> */}
 
 
-
        
       </div>
     </div>
+    
   );
 };
 
@@ -236,6 +237,7 @@ const FEATURES = [
 export function Features() {
   return (
     <section className="pt-10 pb-2 px-4 w-full overflow-hidden">
+
       <div className="container mx-auto mb-25 text-center">
         <h2 className="text-white mb-2 font-bold uppercase text-3xl">Building on Web3 <br /> should'nt be a rocket science</h2>
         {/* <h1 className="text-white mb-4 text-lg">
@@ -247,6 +249,9 @@ export function Features() {
         </p>
 
       </div>
+
+
+        
 
 
 

@@ -1,41 +1,9 @@
-// components
-import { Navbar, Footer, APISection } from "@/components";
-import { FixedPlugin } from "@/components";
-import { FaNetworkWired, FaLock, FaUserShield, FaFileContract, FaRocket, FaListAlt, FaSearch, FaFlask } from "react-icons/fa";
-import { FaEthereum, FaBitcoin } from 'react-icons/fa';
-import { SiSolana, SiPolkadot, SiChainlink } from 'react-icons/si';
 import { MagnifyingGlassIcon, ArrowPathIcon, CloudArrowUpIcon } from "@heroicons/react/24/outline";
 
-// sections
-import { default as Hero } from "./hero";
+const Howitworks = () => {
 
-import VideoIntro from "./get-started";
-import Feature from "./feature";
-import Testimonials from "./testimonials";
-import FAQ from "./faq";
-// import Faqs from "./faqs";
-
-// export default function Campaign() {
-export default function Home() {
-  const providers = [
-    { name: 'Ethereum', icon: <FaEthereum />, link: '#ethereum' },
-    { name: 'Solana', icon: <SiSolana />, link: '#solana' },
-    { name: 'Polkadot', icon: <SiPolkadot />, link: '#polkadot' },
-    { name: 'Chainlink', icon: <SiChainlink />, link: '#chainlink' },
-    { name: 'Bitcoin', icon: <FaBitcoin />, link: '#bitcoin' },
-  ];
-  return (
-    <>
-      <div className="bg-[black] w-full overflow-hidden min-h-screen">
-        <Navbar />
-        <Hero />
-      </div>
-      <div className="bg-gradient-to-b from-black to-black min-h-screen overflow-hidden w-full">
-        <Feature />
-
-
-
-        <div className="flex flex-col items-center py-10  px-2">
+return (
+<div className="flex flex-col items-center py-10  px-2">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-center leading-relaxed w-[90%] lg:w-[50%] text-white py-5">How it Works</h2>
           {/* <div className="grid grid-cols-1 md:grid-cols-5 gap-8"> */}
 
@@ -67,16 +35,7 @@ export default function Home() {
 
           </div>
         </div>
-
-
-        <APISection />
-        <VideoIntro />
-        {/* <Testimonials /> */}
-        <FAQ />
-        <Footer />
-        {/* <FixedPlugin /> */}
-      </div>
-
-    </>
   );
-}
+};
+
+export default Howitworks;
