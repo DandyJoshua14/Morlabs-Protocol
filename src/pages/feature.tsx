@@ -75,20 +75,26 @@ const WhyDev = () => {
   const slides = [
     {
       bg: "bg-gradient-to-r from-purple-500 to-pink-500",
-      title: "Seamless Integration",
-      description: "Our tools are built for smooth deployment, letting you focus on innovation.",
+      title: "Save Time",
+      description: "Stop reinventing the wheel. Access pre-built APIs and SDKs to get your projects up and running in no time.",
       image: "/images/slide1.png", // Update this path
     },
     {
       bg: "bg-gradient-to-r from-purple-500 to-pink-500",
-      title: "Developer-Friendly SDKs",
-      description: "Get started quickly with prebuilt SDKs for faster development cycles.",
+      title: "seemless Integrate",
+      description: "Our tools are built for smooth deployment, letting you focus on innovation.",
       image: "/images/slide2.png", // Update this path
     },
     {
       bg: "bg-gradient-to-r from-orange-500 to-red-500",
-      title: "Scalable Solutions",
-      description: "Build scalable applications with our AI-powered Web3 tools.",
+      title: "Bridge Web2 and Web3",
+      description: "Simplify the learning curve, with tools deisign to integrate decentralized technologies seemlessly.",
+      image: "/images/slide3.png", // Update this path
+    },
+    {
+      bg: "bg-gradient-to-r from-orange-500 to-red-500",
+      title: "AI Powered Tools",
+      description: "Get smart recommendation toiled to your need, save you hours of research",
       image: "/images/slide3.png", // Update this path
     },
   ];
