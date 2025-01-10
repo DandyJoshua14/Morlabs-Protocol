@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image"
@@ -29,7 +30,7 @@ function NavItem({ children, href }: NavItemProps) {
   );
 }
 
-const Navbar = () => {
+export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const handleToggle = () => {
@@ -138,62 +139,62 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="navbar-end">
-          <div className="navbar-center hidden lg:flex ">
-         
-            <ul className="menu menu-horizontal px-1">
-            <li>
-                <Link href="/signup-form" className="font-medium flex items-center"
-                  style={{ color: "white" }}>
+            <div className="navbar-center hidden lg:flex ">
 
-                  About Us
-
-
-                </Link>
-
-              </li>
-              <li>
-                <details>
-                  <summary className="font-medium flex items-center"
-                    style={{ color: "white" }}>
-                    Features
-
-                  </summary>
-                  <ul className="p-2 bg-black text-white">
-                    <li><Link href="#">Web2-to-Web3</Link></li>
-                    <li><Link href="#">Payment</Link></li>
-                    <li><Link href="#">DeFi</Link></li>
-                    <li><Link href="#">Gaming</Link></li>
-                    <li><Link href="#">Publish your API</Link></li>
-                  </ul>
-                </details></li>
+              <ul className="menu menu-horizontal px-1">
                 <li>
-                <Link href="/signup-form" className="font-medium flex items-center"
-                  style={{ color: "white" }}>
+                  <Link href="/signup-form" className="font-medium flex items-center"
+                    style={{ color: "white" }}>
 
-                  How It Works
-
-
-                </Link>
-
-              </li>
+                    About Us
 
 
-              <li>
-                <Link href="/signup-form" className="font-medium flex items-center"
-                  style={{ color: "white" }}>
+                  </Link>
 
-                  Community
+                </li>
+                <li>
+                  <details>
+                    <summary className="font-medium flex items-center"
+                      style={{ color: "white" }}>
+                      Features
+
+                    </summary>
+                    <ul className="p-2 bg-black text-white">
+                      <li><Link href="#">Web2-to-Web3</Link></li>
+                      <li><Link href="#">Payment</Link></li>
+                      <li><Link href="#">DeFi</Link></li>
+                      <li><Link href="#">Gaming</Link></li>
+                      <li><Link href="#">Publish your API</Link></li>
+                    </ul>
+                  </details></li>
+                <li>
+                  <Link href="/signup-form" className="font-medium flex items-center"
+                    style={{ color: "white" }}>
+
+                    How It Works
 
 
-                </Link>
+                  </Link>
 
-              </li>
+                </li>
 
 
-            </ul>
+                <li>
+                  <Link href="/signup-form" className="font-medium flex items-center"
+                    style={{ color: "white" }}>
 
-          </div>
-          
+                    Community
+
+
+                  </Link>
+
+                </li>
+
+
+              </ul>
+
+            </div>
+
             {/* <button className="rounded-[30px] text-white hover:border-gray-700 border-white border-[0.5px] py-3 hidden lg:block lg:px-5 hover:bg-gray-700">Connect wallet</button> */}
           </div>
         </div>

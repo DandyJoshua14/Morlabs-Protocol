@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-roboto-mono: 'Roboto Mono', monospace;
+}
+
+body {
+  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+}
+
+/* Green button hover color */
+.green-button {
+  @apply rounded-md bg-[#1ab479] px-[24px] py-[16px] border-none text-white w-full lg:w-[600px] h-[50px] box-border;
+}
+
+.green-button:hover {
+  @apply bg-green-700;
+}
+
+/* Loader spinner */
+.loader {
+  border: 4px dotted #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Blue button */
+.blue-button {
+  background-color: #0088cc;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.blue-button:hover {
+  background-color: #0077b3;
+}

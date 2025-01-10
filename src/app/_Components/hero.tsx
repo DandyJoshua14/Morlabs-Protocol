@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { FaEthereum, FaBitcoin, FaLinkedin, FaGithub } from 'react-icons/fa'; // Placeholder icons
 import { SiSolana, SiPolkadot, SiChainlink } from 'react-icons/si'; // Web3 specific icons
 
-import { CreditCardIcon, CubeIcon, GlobeAltIcon, LinkIcon, ServerIcon, ChartBarIcon } from '@heroicons/react/outline';
+import { CreditCardIcon, CubeIcon, GlobeAltIcon, LinkIcon, ServerIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 
 
 
@@ -129,12 +129,12 @@ export const TrustedCompanies = () => {
         {companies.map((company, index) => (
           <div key={index} className="flex flex-col md:flex-col lg:flex-row justify-center items-center">
             <div key={index} className="company-card flex flex-col lg:flex-row mt-6 items-center">
-            <div className="company-icon text-5xl text-white w-[130px] h-[60px] flex items-center justify-center mb-2p-4 border border-green-500 rounded-lg hover:bg-green-400 transition-all">
-              {company.icon}
-              <p className="company-name text-sm font-semibold ml-2">{company.name}</p>
-            </div>
+              <div className="company-icon text-5xl text-white w-[130px] h-[60px] flex items-center justify-center mb-2p-4 border border-green-500 rounded-lg hover:bg-green-400 transition-all">
+                {company.icon}
+                <p className="company-name text-sm font-semibold ml-2">{company.name}</p>
+              </div>
 
-          </div>
+            </div>
           </div>
         ))}
       </div>
@@ -161,7 +161,7 @@ function Hero() {
 
             <div className="">
               {/* <JoinWaitlist/> */}
-              <Link href="/signup-form" passHref>
+              <Link href="/signup" passHref>
                 <button
                   type="submit"
                   className="p-2 pl-6 pr-6 rounded-[46px]  bg-green-700 font-semibold text-white hover:bg-green-900"
@@ -174,54 +174,54 @@ function Hero() {
             </div>
             {/* <TrustedCompanies />
             <p className="mt-6 text-md py-5 font-semibold">Backed by the best in the web3 space</p> */}
-            
+
 
             <div className="relative w-full flex justify-center pt-20">
-        <div className="relative w-[60%] h-[60%] flex justify-between items-center">
-          {/* Arc arrangement */}
-          <div className="absolute left-[5%] top-[10%]">
-            {/* <img src="/logos/moralis.png" alt="Moralis Logo" className="w-12 h-12" /> */}
-            <SiSolana className="w-12 h-12 text-green-700" />
-          </div>
-          <div className="absolute left-[15%] top-[85%]">
-            {/* <img src="/logos/thirdweb.png" alt="Thirdweb Logo" className="w-12 h-12" /> */}
-            <SiSolana className="w-12 h-12 text-green-700" />
-          </div>
-          <div className="absolute left-[30%]">
-            {/* <img src="/logos/quicknode.png" alt="QuickNode Logo" className="w-12 h-12" /> */}
-            <SiSolana className="w-12 h-12 text-green-700" />
-          </div>
-          <div className="absolute left-[50%] top-[5%]">
-            {/* <img src="/logos/nx.png" alt="Nx Logo" className="w-12 h-12" /> */}
-            <SiSolana className="w-12 h-12 text-green-700" />
-          </div>
-          <div className="absolute right-[30%]">
-            {/* <img src="/logos/walletconnect.png" alt="WalletConnect Logo" className="w-12 h-12" /> */}
-            <SiSolana className="w-12 h-12 text-green-700" />
-          </div>
-          <div className="absolute right-[15%] top-[5%]">
-            {/* <img src="/logos/web3auth.png" alt="Web3Auth Logo" className="w-12 h-12" /> */}
-            <SiSolana className="w-12 h-12 text-green-700" />
-          </div>
-          <div className="absolute right-[5%] top-[10%]">
-            {/* <img src="/logos/particle-network.png" alt="Particle Network Logo" className="w-12 h-12" /> */}
-            <SiSolana className="w-12 h-12 text-green-700" />
-          </div>
-        </div>
-      </div>
+              <div className="relative w-[60%] h-[60%] flex justify-between items-center">
+                {/* Arc arrangement */}
+                <div className="absolute left-[5%] top-[10%]">
+                  {/* <img src="/logos/moralis.png" alt="Moralis Logo" className="w-12 h-12" /> */}
+                  <SiSolana className="w-12 h-12 text-green-700" />
+                </div>
+                <div className="absolute left-[15%] top-[85%]">
+                  {/* <img src="/logos/thirdweb.png" alt="Thirdweb Logo" className="w-12 h-12" /> */}
+                  <SiSolana className="w-12 h-12 text-green-700" />
+                </div>
+                <div className="absolute left-[30%]">
+                  {/* <img src="/logos/quicknode.png" alt="QuickNode Logo" className="w-12 h-12" /> */}
+                  <SiSolana className="w-12 h-12 text-green-700" />
+                </div>
+                <div className="absolute left-[50%] top-[5%]">
+                  {/* <img src="/logos/nx.png" alt="Nx Logo" className="w-12 h-12" /> */}
+                  <SiSolana className="w-12 h-12 text-green-700" />
+                </div>
+                <div className="absolute right-[30%]">
+                  {/* <img src="/logos/walletconnect.png" alt="WalletConnect Logo" className="w-12 h-12" /> */}
+                  <SiSolana className="w-12 h-12 text-green-700" />
+                </div>
+                <div className="absolute right-[15%] top-[5%]">
+                  {/* <img src="/logos/web3auth.png" alt="Web3Auth Logo" className="w-12 h-12" /> */}
+                  <SiSolana className="w-12 h-12 text-green-700" />
+                </div>
+                <div className="absolute right-[5%] top-[10%]">
+                  {/* <img src="/logos/particle-network.png" alt="Particle Network Logo" className="w-12 h-12" /> */}
+                  <SiSolana className="w-12 h-12 text-green-700" />
+                </div>
+              </div>
+            </div>
 
-      {/* Center Text */}
-      <div className="text-center mt-12">
-        <p className="text-lg">Backed by the best in the web3 space</p>
-      </div>
+            {/* Center Text */}
+            <div className="text-center mt-12">
+              <p className="text-lg">Backed by the best in the web3 space</p>
+            </div>
 
-      {/* Logos/Partners */}
-      <div className="flex items-center justify-center space-x-8 mt-6">
-        {/* <img src="/logos/solana.png" alt="Solana Logo" className="w-24" /> */}
-        <SiSolana className="w-24 h-12 text-green-700" />
-        {/* <img src="/logos/moralis-wallet.png" alt="Moralis Wallet Logo" className="w-8" /> */}
-        <SiSolana className="w-12 h-12 text-green-700" />
-      </div>
+            {/* Logos/Partners */}
+            <div className="flex items-center justify-center space-x-8 mt-6">
+              {/* <img src="/logos/solana.png" alt="Solana Logo" className="w-24" /> */}
+              <SiSolana className="w-24 h-12 text-green-700" />
+              {/* <img src="/logos/moralis-wallet.png" alt="Moralis Wallet Logo" className="w-8" /> */}
+              <SiSolana className="w-12 h-12 text-green-700" />
+            </div>
 
           </div>
 
