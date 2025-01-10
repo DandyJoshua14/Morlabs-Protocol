@@ -26,18 +26,19 @@
 //       </main>
 //     </div>
 // Section 2
-import { Navbar, Footer, APISection } from "@/components";
-import { FixedPlugin } from "@/components";
-import { FaNetworkWired, FaLock, FaUserShield, FaFileContract, FaRocket, FaListAlt, FaSearch, FaFlask } from "react-icons/fa";
+import { Navbar } from "./_Components/components/navbar";
+import { Footer } from "./_Components/components/footer";
+import { APISection } from "./_Components/components/api-section";
+
 import { FaEthereum, FaBitcoin } from 'react-icons/fa';
 import { SiSolana, SiPolkadot, SiChainlink } from 'react-icons/si';
 import { MagnifyingGlassIcon, ArrowPathIcon, CloudArrowUpIcon } from "@heroicons/react/24/outline";
 // sections
-import { default as Hero } from "./hero";
-import VideoIntro from "./get-started";
-import Feature from "./feature";
-import Testimonials from "./testimonials";
-import FAQ from "./faq";
+import VideoIntro from "./_Components/get-started";
+import Feature from "./_Components/feature";
+import Testimonials from "./_Components/testimonials";
+import FAQ from "./_Components/faq";
+import Hero from "./_Components/hero";
 // import Faqs from "./faqs";
 // export default function Campaign() {
 export default function Home() {
@@ -93,7 +94,6 @@ export default function Home() {
         {/* <FixedPlugin /> */}
       </div>
     </>
-  );
-    </>
+
   );
 }
