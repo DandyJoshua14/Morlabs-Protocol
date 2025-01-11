@@ -67,7 +67,7 @@ export const Navbar = () => {
                     className="font-medium flex items-center p-2"
                     style={{ color: "black" }}
                   >
-                    For Developers
+                  About Us
 
                   </button>
                 </Link></li>
@@ -78,7 +78,7 @@ export const Navbar = () => {
                         className="font-medium flex items-center p-2"
                         style={{ color: "black" }}
                       >
-                        Community
+                        Features
 
                       </button>
                     </Link></summary>
@@ -92,7 +92,7 @@ export const Navbar = () => {
                         className="font-medium flex items-center p-2"
                         style={{ color: "black" }}
                       >
-                        Company
+                       How It Works
 
                       </button>
                     </Link></summary>
@@ -105,7 +105,7 @@ export const Navbar = () => {
                         className="font-medium flex items-center p-2"
                         style={{ color: "black" }}
                       >
-                        Docs
+                        Community
 
                       </button>
                     </Link></summary>
@@ -115,9 +115,9 @@ export const Navbar = () => {
 
                   <i className="fa-brands fa-twitter text-base text-green-600" />
 
-                  <i className="fa-brands fa-facebook text-base text-green-600" />
+                  <i className="fa-brands fa-telegram text-base text-green-600"></i>
 
-                  <i className="fa-brands fa-instagram text-base text-green-600" />
+                  <i className="fa-brands fa-linkedin text-base text-green-600"></i>
 
                 </div>
               </ul>
@@ -132,72 +132,79 @@ export const Navbar = () => {
         {/* MOBILE NAV BAR ENDS HERE */}
 
         {/* WEB RESPONSIVENESS */}
-        <div className="navbar text-white py-3 hidden lg:flex rounded-b-[35px] px-10 items-center" style={{ background: 'black' }}>
-          <div className="navbar-start">
-            <Link className="btn mt-5 btn-ghost hidden lg:block text-xl ml-5" href="/">
-              <Image alt="morlabs_logo" width={150} height={50} src="/logos/morlabs-logo.svg" />
-            </Link>
-          </div>
-          <div className="navbar-end">
-            <div className="navbar-center hidden lg:flex ">
 
-              <ul className="menu menu-horizontal px-1">
-                <li>
-                  <Link href="/signup-form" className="font-medium flex items-center"
-                    style={{ color: "white" }}>
+<div
+  className="navbar text-white py-3 hidden lg:flex rounded-b-[35px] px-10 items-center w-full"
+  style={{ background: "black" }}
+>
+  <div className="navbar-start">
+    <Link
+      className="btn mt-5 btn-ghost hidden lg:block text-xl ml-5"
+      href="/"
+    >
+      <Image
+        alt="morlabs_logo"
+        width={150}
+        height={50}
+        src="/logos/morlabs-logo.svg"
+      />
+    </Link>
+  </div>
+  <div className="navbar-end ml-auto">
+    <div className="navbar-center hidden lg:flex">
+      <ul className="menu menu-horizontal px-1 flex space-x-6">
+        <li>
+          <Link
+            href="/about-us"
+            className="font-medium flex items-center"
+            style={{ color: "white" }}
+          >
+            About Us
+          </Link>
+        </li>
+        <li>
+          <details className="group">
+            <summary
+              className="font-medium flex items-center cursor-pointer"
+              style={{ color: "white" }}
+            >
+              Features
+            </summary>
+            <ul className="p-2 bg-black text-white hidden group-open:block">
+              <li>
+                <Link href="/feature-1">Feature 1</Link>
+              </li>
+              <li>
+                <Link href="/feature-2">Feature 2</Link>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <Link
+            href="/how-it-works"
+            className="font-medium flex items-center"
+            style={{ color: "white" }}
+          >
+            How It Works
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/community"
+            className="font-medium flex items-center"
+            style={{ color: "white" }}
+          >
+            Community
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-                    About Us
 
 
-                  </Link>
-
-                </li>
-                <li>
-                  <details>
-                    <summary className="font-medium flex items-center"
-                      style={{ color: "white" }}>
-                      Features
-
-                    </summary>
-                    <ul className="p-2 bg-black text-white">
-                      <li><Link href="#">Web2-to-Web3</Link></li>
-                      <li><Link href="#">Payment</Link></li>
-                      <li><Link href="#">DeFi</Link></li>
-                      <li><Link href="#">Gaming</Link></li>
-                      <li><Link href="#">Publish your API</Link></li>
-                    </ul>
-                  </details></li>
-                <li>
-                  <Link href="/signup-form" className="font-medium flex items-center"
-                    style={{ color: "white" }}>
-
-                    How It Works
-
-
-                  </Link>
-
-                </li>
-
-
-                <li>
-                  <Link href="/signup-form" className="font-medium flex items-center"
-                    style={{ color: "white" }}>
-
-                    Community
-
-
-                  </Link>
-
-                </li>
-
-
-              </ul>
-
-            </div>
-
-            {/* <button className="rounded-[30px] text-white hover:border-gray-700 border-white border-[0.5px] py-3 hidden lg:block lg:px-5 hover:bg-gray-700">Connect wallet</button> */}
-          </div>
-        </div>
         {/* END OF WEB RESPONSIVENESS */}
       </div>
     </div >
