@@ -3,7 +3,7 @@ import { Donegal_One } from 'next/font/google';
 import Image from "next/image"
 import Link from 'next/link';
 
-const aS = ['Explore APIs', 'Documentation', 'About Us', 'Contact Us', 'Careers'];
+
 const CURRENT_YEAR = new Date().getFullYear();
 
 export const Footer = () => {
@@ -90,16 +90,7 @@ export const Footer = () => {
 
             </p>
           </Link>
-          {/* <Link href="#">
-              <p className="text-white opacity-75 hover:opacity-100">
-                <i className="fa-brands fa-github text-2xl not-italic"></i>
-              </p>
-            </Link>
-            <Link href="#">
-              <p className="text-white opacity-75 hover:opacity-100">
-                <i className="fa-brands fa-dribbble text-2xl not-italic"></i>
-              </p>
-            </Link> */}
+          
         </div>
       </div>
 

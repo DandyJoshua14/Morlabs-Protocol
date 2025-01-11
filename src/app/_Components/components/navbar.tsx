@@ -52,7 +52,7 @@ export const Navbar = () => {
               <GiCancel style={{ display: open ? 'block' : 'none' }} onClick={handleToggle} size={17} />
 
               <Image alt="morlabs_logo" width={100} height={70} src="/logos/morlabs-logo.svg" />
-              <button className="rounded-[30px] w-auto text-white text-[0.8rem] hover:border-gray-700 border-white border-[0.5px] py-3 px-4 lg:hidden hover:bg-gray-700">Connect wallet</button>
+              <button className="rounded-[30px] w-auto text-white text-[0.8rem] hover:border-gray-700 border-white border-[0.5px] py-3 px-4 lg:hidden hover:bg-gray-700">JoinWaitList</button>
 
 
 

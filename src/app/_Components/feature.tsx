@@ -11,6 +11,8 @@ import {
 } from "@heroicons/react/24/solid";
 
 import { FiArrowLeftCircle, FiArrowRightCircle  } from "react-icons/fi";
+import FeatureSections from "./learn";
+import WhyDev from "./whydev";
 
 import FeatureCard from "../components/feature-card";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -40,7 +42,7 @@ const ApiProviders = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center py-10">
+    <div className="flex flex-col items-center py-10 w-full">
       <h2 className="text-3xl font-bold mb-6 text-white py-5">How it Works</h2>
       {/* <div className="grid grid-cols-1 md:grid-cols-5 gap-8"> */}
 
@@ -71,132 +73,6 @@ const ApiProviders = () => {
 };
 
 
-const WhyDev = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [
-    {
-      bg: "bg-gradient-to-r from-purple-500 to-pink-500",
-      title: "Save Time",
-      description: "Stop reinventing the wheel. Access pre-built APIs and SDKs to get your projects up and running in no time.",
-      image: "/images/slide1.png", // Update this path
-    },
-    {
-      bg: "bg-gradient-to-r from-purple-500 to-pink-500",
-      title: "seemless Integrate",
-      description: "Our tools are built for smooth deployment, letting you focus on innovation.",
-      image: "/images/slide2.png", // Update this path
-    },
-    {
-      bg: "bg-gradient-to-r from-orange-500 to-red-500",
-      title: "Bridge Web2 and Web3",
-      description: "Simplify the learning curve, with tools deisign to integrate decentralized technologies seemlessly.",
-      image: "/images/slide3.png", // Update this path
-    },
-    {
-      bg: "bg-gradient-to-r from-orange-500 to-red-500",
-      title: "AI Powered Tools",
-      description: "Get smart recommendation toiled to your need, save you hours of research",
-      image: "/images/slide3.png", // Update this path
-    },
-  ];
-
-  const slideCount = slides.length;
-
-  // Automatically transition to the next slide
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slideCount);
-    }, 5000); // Change slide every 5 seconds
-
-    return () => clearInterval(timer); // Cleanup timer on unmount
-  }, [slideCount]);
-
-  // Go to the previous slide
-  const handlePrev = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + slideCount) % slideCount);
-  };
-
-  // Go to the next slide
-  const handleNext = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slideCount);
-  };
-
-
-// export const BenefitsCarousel = () => {
-  return (
-    <>
-    <div className=" mx-auto flex flex-col items-center px-5 py-10 text-white">
-        <h2 className="text-4xl font-bold text-center mb-8">Why developers need Morlabs</h2>
-    </div>
-    <div
-      className={`relative flex items-center w-[50%] mx-auto  ${slides[currentSlide].bg} text-white transition-all duration-500`}
-    >
-      
-
-        <div className="relative w-full h-96 flex items-center justify-center overflow-hidden">
-          {/* Slides */}
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`absolute w-full h-[300px] flex items-center justify-center gap-8 transition-opacity duration-1000 ${
-                currentSlide === index ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              {/* Alternating layout */}
-              {index % 2 === 0 ? (
-                <>
-                  <div className="w-1/2 flex flex-col justify-center">
-                    <h3 className="text-2xl font-bold mb-4">{slide.title}</h3>
-                    <p className="text-lg">{slide.description}</p>
-                  </div>
-                  <div className="w-1/2 h-full flex items-center justify-center">
-                    <img
-                      src={slide.image}
-                      alt={slide.title}
-                      className="h-full object-cover rounded-lg"
-                    />
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="w-1/2 h-full flex items-center justify-center">
-                    <img
-                      src={slide.image}
-                      alt={slide.title}
-                      className="h-full object-cover rounded-lg"
-                    />
-                  </div>
-                  <div className="w-1/2 flex flex-col justify-center">
-                    <h3 className="text-2xl font-bold mb-4">{slide.title}</h3>
-                    <p className="text-lg">{slide.description}</p>
-                  </div>
-                </>
-              )}
-            </div>
-          ))}
-
-          {/* Arrows */}
-          <button
-            onClick={handlePrev}
-            className="absolute left-0 z-10 top-1/2 transform -translate-y-1/2 p-2 rounded-full hover:bg-black bg-opacity-70 transition"
-          >
-            <FiArrowLeftCircle size={60} className="text-white" /> {/* Left arrow */}
-          </button>
-          <button
-            onClick={handleNext}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full hover:bg-black bg-opacity-70 transition"
-          >
-            <FiArrowRightCircle size={60} className="text-white" /> {/* Right arrow */}
-          </button>
-        </div>
-
-    
-       
-      </div>
-    {/* // </div> */}
-    </>
-  );
-};
 
 
 
@@ -276,34 +152,10 @@ MorLabs Protocol simplifies Web3 development with high-performance tools that sa
 
 </div>
     </div>
-    <div className="mt-16 flex flex-col items-center justify-center gap-y-4 gap-x-8 border-t border-b border-white rounded-t-[46px] rounded-b-[46px] max-w-6xl mx-auto px-16 py-14">
-        <div className="text-center text-white text-lg font-normal">
-         
-          <h1 className="text-white bold">Learn</h1>
+    
+    <FeatureSections />
 
-        </div>
-      </div>
-      <div className="mt-16 flex flex-col items-center justify-center gap-y-4 gap-x-8 border-t border-b border-white rounded-t-[46px] rounded-b-[46px] max-w-6xl mx-auto px-16 py-14">
-        <div className="text-center text-white text-lg font-normal">
-         
-          <h1 className="text-white bold">Test</h1>
 
-        </div>
-      </div>
-      <div className="mt-16 flex flex-col items-center justify-center gap-y-4 gap-x-8 border-t border-b border-white rounded-t-[46px] rounded-b-[46px] max-w-6xl mx-auto px-16 py-14">
-        <div className="text-center text-white text-lg font-normal">
-         
-          <h1 className="text-white bold">Integrate</h1>
-
-        </div>
-      </div>
-      <div className="mt-16 flex flex-col items-center justify-center gap-y-4 gap-x-8 border-t border-b border-white rounded-t-[46px] rounded-b-[46px] max-w-6xl mx-auto px-16 py-14">
-        <div className="text-center text-white text-lg font-normal">
-         
-          <h1 className="text-white bold">Deploy</h1>
-
-        </div>
-      </div>
 
       <WhyDev />
 
