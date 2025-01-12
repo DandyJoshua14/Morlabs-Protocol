@@ -4,12 +4,15 @@ const RotatingIcons = () => {
   const icons = [
     "/icons/icon1.png",
     "/icons/icon2.png",
-    "/icons/icon1.png",
-    "/icons/icon2.png",
-    "/icons/icon2.png",
-    "/icons/icon1.png",
-    "/icons/icon2.png",
-    "/icons/icon1.png",
+    "/icons/icon3.png",
+    "/icons/icon4.png",
+    "/icons/icon5.png",
+    "/icons/icon6.png",
+    "/icons/icon7.png",
+    "/icons/icon8.png",
+    "/icons/icon9.png",
+    
+    
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -27,8 +30,8 @@ const RotatingIcons = () => {
       <div className="relative w-36 h-12">
         {icons.map((icon, index) => {
           // Calculate positions on the vertical half-circle
-          const angle = (index * Math.PI) / (icons.length - 15) - Math.PI / 2; // Vertical downward curve
-          const x = Math.sin(angle) * 300; // Adjust for elliptical shape (horizontal movement)
+          const angle = (index * Math.PI) / (icons.length - 17) - Math.PI / 2; // Vertical downward curve
+          const x = Math.sin(angle) * 280; // Adjust for elliptical shape (horizontal movement)
           const y = Math.cos(angle) * 160; // Radius: 140px (vertical depth)
 
           return (
@@ -50,7 +53,7 @@ const RotatingIcons = () => {
         
       </div>
 {/* Vertical moving icon */}
-<div className="absolute h-72 w-16 mt-3">
+<div className="absolute z-10 h-72 w-16 mt-9">
         <img
           src={icons[activeIndex]}
           alt="Moving Icon"
@@ -64,9 +67,9 @@ const RotatingIcons = () => {
       
       <div className="absolute inset-0 flex flex-col items-center justify-center translate-y-[380px]">
       <p className="text-lg">Backed by the best in the web3 space</p>
-      <div className="flex space-x-4">
-        <img src="/icons/solana.png" alt="Solana Logo" className="w-16" />
-        <img src="/icons/other-logo.png" alt="Other Logo" className="w-16" />
+      <div className="flex space-x-4 m-0">
+        <img src="/icons/icon10.png" alt="Solana Logo" className="w-36 h-20" />
+        <img src="/icons/icon11.png" alt="Other Logo" className="w-20 h-20 " />
       </div>
       </div>
     </div>

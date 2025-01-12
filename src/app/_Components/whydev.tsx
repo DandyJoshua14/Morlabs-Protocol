@@ -61,8 +61,9 @@ const WhyDev = () => {
         </h2>
       </div>
 
+<div className="relative w-[80%] items-center mx-auto">
       <div
-        className={`relative flex flex-col items-center w-[50%] mx-auto p-6 ${slides[currentSlide].bg} text-white transition-all duration-500 rounded-lg shadow-lg`}
+        className={` flex flex-col items-center w-[50%] mx-auto p-6 ${slides[currentSlide].bg} text-white transition-all duration-500 rounded-lg shadow-lg`}
       >
         {/* Slide Content */}
         <div className="text-center mb-6">
@@ -90,10 +91,11 @@ const WhyDev = () => {
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-[-120px] top-1/2 transform -translate-y-1/2 p-2 rounded-full hover:bg-green-700 bg-opacity-70 transition"
+          className="absolute right-[-10px] top-1/2 transform -translate-y-1/2 p-2 rounded-full hover:bg-green-700 bg-opacity-70 transition"
         >
           <FiArrowRightCircle size={60} className="text-white" />
         </button>
+      </div>
       </div>
     </>
   );
