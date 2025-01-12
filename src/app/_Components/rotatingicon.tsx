@@ -24,11 +24,11 @@ const RotatingIcons = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
       {/* Curve with icons */}
-      <div className="relative w-36 h-72">
+      <div className="relative w-36 h-12">
         {icons.map((icon, index) => {
           // Calculate positions on the vertical half-circle
-          const angle = (index * Math.PI) / (icons.length - 1) - Math.PI / 2; // Vertical downward curve
-          const x = Math.sin(angle) * 180; // Adjust for elliptical shape (horizontal movement)
+          const angle = (index * Math.PI) / (icons.length - 15) - Math.PI / 2; // Vertical downward curve
+          const x = Math.sin(angle) * 300; // Adjust for elliptical shape (horizontal movement)
           const y = Math.cos(angle) * 160; // Radius: 140px (vertical depth)
 
           return (
@@ -47,10 +47,10 @@ const RotatingIcons = () => {
             />
           );
         })}
+        
       </div>
-
-      {/* Vertical moving icon */}
-      <div className="relative h-72 w-16 mt-8">
+{/* Vertical moving icon */}
+<div className="absolute h-72 w-16 mt-3">
         <img
           src={icons[activeIndex]}
           alt="Moving Icon"
@@ -60,11 +60,14 @@ const RotatingIcons = () => {
           }}
         />
       </div>
-
-      <p className="mt-6 text-lg">Backed by the best in the web3 space</p>
-      <div className="flex mt-4 space-x-4">
+      
+      
+      <div className="absolute inset-0 flex flex-col items-center justify-center translate-y-[380px]">
+      <p className="text-lg">Backed by the best in the web3 space</p>
+      <div className="flex space-x-4">
         <img src="/icons/solana.png" alt="Solana Logo" className="w-16" />
         <img src="/icons/other-logo.png" alt="Other Logo" className="w-16" />
+      </div>
       </div>
     </div>
   );

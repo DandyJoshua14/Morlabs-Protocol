@@ -112,7 +112,7 @@ const FEATURES = [
 
 export function Features() {
   return (
-    <section className="pt-10 pb-2 px-4 w-full overflow-hidden">
+    <section className="pb-2 px-4 w-full overflow-hidden">
 
       <div className="container mx-auto mb-25 text-center">
         <h2 className="text-white mb-2 font-bold uppercase text-3xl">Building on Web3 <br /> should'nt be a rocket science</h2>
