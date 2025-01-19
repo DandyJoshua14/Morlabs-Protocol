@@ -1,37 +1,7 @@
-// import Link from 'next/link';
-// import Logo from './_Components/Logo';
-// import './globals.css'; // Ensure this file contains the new blue-button class
-
-// export default function Home() {
-//   return (
-//     <>
-//     <div className="grid bg-black grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-//       <div className="absolute top-5 left-5">
-//         <Logo />
-//       </div>
-//       <main className="text-white text-2xl font-bold flex flex-col gap-8 row-start-2 items-center sm:items-start">
-//         Morlabs Protocol is in development...
-//         <Link href="https://t.me/+h3znet1BenA4OWI0">
-//           <button className='blue-button flex justify-center items-center'>
-//             Join telegram
-//           </button>
-//         </Link>
-//         <div>
-//           <Link href='/welcome'>
-//             <button className='green-button flex justify-center items-center'>
-//               Start unboarding
-//             </button>
-//           </Link>
-//         </div>
-//       </main>
-//     </div>
-// Section 2
-import { Navbar } from "./_Components/components/navbar";
-import { Footer } from "./_Components/components/footer";
-import { APISection } from "./_Components/components/api-section";
-
+'use client'
 import { FaEthereum, FaBitcoin } from 'react-icons/fa';
 import { SiSolana, SiPolkadot, SiChainlink } from 'react-icons/si';
+import { SolanaIcon } from "./_Components/Icons/Solana"
 import { MagnifyingGlassIcon, ArrowPathIcon, CloudArrowUpIcon } from "@heroicons/react/24/outline";
 // sections
 import VideoIntro from "./_Components/get-started";
@@ -39,6 +9,7 @@ import Feature from "./_Components/feature";
 import Testimonials from "./_Components/testimonials";
 import FAQ from "./_Components/faq";
 import Hero from "./_Components/hero";
+import { useState } from "react";
 // import Faqs from "./faqs";
 // export default function Campaign() {
 export default function Home() {
@@ -49,51 +20,74 @@ export default function Home() {
     { name: 'Chainlink', icon: <SiChainlink />, link: '#chainlink' },
     { name: 'Bitcoin', icon: <FaBitcoin />, link: '#bitcoin' },
   ];
+  const [showMenu, setShowMenu] = useState(false);
   return (
-    <>
-      <div className="bg-[black] w-full overflow-hidden min-h-screen">
-        <Navbar />
-        <Hero />
-      </div>
-      <div className="bg-gradient-to-b from-black to-black min-h-screen overflow-hidden w-full">
-        <Feature />
-        <div className="flex flex-col items-center py-10  px-2">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-center leading-relaxed w-[90%] lg:w-[50%] text-white py-5">How it Works</h2>
-          {/* <div className="grid grid-cols-1 md:grid-cols-5 gap-8"> */}
-          <div className="flex justify-around w-full items-center">
-            <div className="flex flex-col lg:flex-row justify-center items-center md:gap-x-4 gap-y-8">
-              {/* <div className="flex flex-col justify-center mt-10 p-[1px] items-center bg-gradient-to-t from-green-500 to-purple-500 rounded-2xl"> */}
-              <div className="flex flex-col justify-center mt-[-7px] py-24 items-center bg-gradient-to-l from-green-700 to-black rounded-2xl px-14 lg:mb-12">
-                <span><MagnifyingGlassIcon className="h-[100px] w-[100px] text-white pb-5" /></span>
-                <span className="text-lg text-white">Browse SDKs & APIs</span>
-                {/* </div> */}
-              </div>
-              <div className="flex flex-col justify-center mt-[-7px] py-24 items-center bg-gradient-to-l from-green-700 to-black rounded-2xl px-14 lg:mb-12">
-                <span><ArrowPathIcon className="h-[90px] w-[90px] text-white" /></span>
-                <span className="text-lg text-white w-[60%] text-center">
-                  Integrate seamlessly into your project
-                </span>
-              </div>
-              {/* <div className="flex flex-col justify-center lg:mt-10 p-[1px] items-center bg-gradient-to-l from-green-500 to-black rounded-2xl"> */}
-              <div className="flex flex-col justify-center mt-[-7px] py-24 items-center bg-gradient-to-l from-green-700 to-black rounded-2xl px-14 lg:mb-12">
-                <span><CloudArrowUpIcon className="h-[100px] w-[100px] text-white" /></span>
-                <span className="text-lg text-center text-white">Go live with web3 functionality</span>
-                {/* </div> */}
-              </div>
-            </div>
-
+    <div className='bg-black text-white'>
+      <div className="sm:h-screen">
+        {/* Navbar Section */}
+        <nav className="bg-black sm:flex px-10 sm:flex-row hidden py-5 justify-between items-center">
+          <div className="items-start"><img src="./morlabs-logo.png" alt="morlabs_logo" width={150} height={150} /></div>
+          <div>
+            <ul className="sm:flex text-white list-none justify-between gap-x-8">
+              <li>About</li>
+              <li>Features</li>
+              <li>How it Works</li>
+              <li>Community</li>
+              <li>Whitepaper</li>
+            </ul>
+          </div>
+        </nav>
+        <nav className="sm:hidden block bg-black">
+          <div className="icon" onClick={() => { setShowMenu(!showMenu) }}>
+            <i className="fa fa-bars"></i>
+          </div>
+          {showMenu && <div> <ul className="text-white list-none gap-y-8">
+            <li>About</li>
+            <li>Features</li>
+            <li>How it Works</li>
+            <li>Community</li>
+            <li>Whitepaper</li>
+          </ul></div>}
+        </nav>
+        <div className="mt-10 max-w-5xl mx-auto">
+          <div className="px-5 text-6xl font-bold font-bricolage text-center m-auto">
+            <h3 className='py-3'>One Platform,</h3>
+            <h3 className=''>All the tools you need to build in Web3</h3>
+            <p className='p-2 font-normal text-lg whitespace-wrap'>Access ready-to-use APIs, SDKs, and AI-powered recommendations for simplified web3 development</p>
+            <button className="rounded-full bg-green-500 text-lg px-5 py-4">Join Waitlist</button>
           </div>
         </div>
 
-        <APISection />
-        <VideoIntro />
-        <Testimonials />
-        {/* <Testimonials /> */}
-        <FAQ />
-        <Footer />
-        {/* <FixedPlugin /> */}
+        <div className="mt-10">
+          <div className="py-5 text-4xl font-bold font-bricolage text-center items-center">
+            <p className='p-2 font-normal text-xs whitespace-wrap'>Backed By:</p>
+            <div className=" text-lg px-5 justify-center items-center flex">
+              <button className="flex cursor-not-allowed p-5 rounded-full items-center"><SolanaIcon /> &nbsp; Solana
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </>
+      <hr />
+      {/* About Section */}
+      <div>
+        <div className="mt-10 max-w-6xl mx-auto min-h-screen">
+          <div className="px-5 text-6xl font-bold font-bricolage text-center m-auto">
+            <h3 className='py-3'>Building in web3<br />shouldn't be rocket science</h3>
 
+            <p className='p-2 font-normal text-lg whitespace-wrap'>Developers waste hours hunting for the right tools, struggling with integrations, and navigating the steep learning curve of web3 development. The result? Slow progress, frustration, and missed opportunities</p>
+            <div className="sm:flex">
+              <div className="max-w-1xl w-1/6"></div>
+              <div className="rounded-xl max-w-4xl w-4/6 text-center text-black mx-auto mt-5 h-[500px] bg-white text-lg px-5 py-4"><h3 className="text-3xl py-6">
+                Leave Rocket Science to NASA.<br /> We've got you covered
+              </h3>
+                <p className='p-2 font-normal text-lg whitespace-wrap'>Morlabs Protocol simplifies Web3 development with high performance</p>
+              </div>
+              <div className="w-1/6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

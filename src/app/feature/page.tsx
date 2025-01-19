@@ -9,7 +9,6 @@ import {
   LockClosedIcon,
 } from "@heroicons/react/24/solid";
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
-import FeatureCard from "../components/feature-card";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Autoplay } from 'swiper/modules'; // Import the Autoplay module

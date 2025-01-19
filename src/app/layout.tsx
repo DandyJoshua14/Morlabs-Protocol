@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Roboto_Mono } from "next/font/google";
+
 import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
