@@ -34,7 +34,7 @@ const Powered = () => {
 
             <div className='relative flex justify-center items-center'>
 
-                <div className='lg:h-[450px] pb-5 h-auto md:w-[500px] lg:w-[800px] p-4 w-[90%] mt-[80px] flex flex-col rounded-xl bg-white'>
+                <div className='lg:h-[450px] md:pb-5 h-auto md:w-[500px] lg:w-[800px] pb-14 p-4 w-[90%] mt-[80px] flex flex-col rounded-xl bg-white'>
                     <p className='text-black text-[2rem] text-center font-semibold pt-[50px]'>Leave the rocket science to NASA. <br /> We’ve got Web3 covered</p>
                     <p className='text-black text-[1rem] my-[25px] text-center'>MorLabs Protocol simplifies Web3 development with high-performance tools <br /> that save time, reduce friction, and help you build faster.</p>
                     <div className='flex justify-center items-center space-y-3 flex-col mt-[20px]'>

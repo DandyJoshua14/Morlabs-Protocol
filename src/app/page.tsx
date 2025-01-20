@@ -62,9 +62,9 @@ export default function Home() {
 
       <div className="mt-10 max-w-5xl mx-auto">
         <div className="px-2 text-[3.4rem] font-bold font-bricolage text-center m-auto">
-          <h3 className='py-3'>One Platform,</h3>
-          <h3 className="lg:whitespace-normal whitespace-wrap w-[90%]">All the tools you need to build in Web3</h3>
-          <p className='p-2 font-normal text-lg whitespace-wrap mt-[24px]'>Access ready-to-use APIs, SDKs, and AI-powered recommendations <br /> for simplified web3 development</p>
+          <h3 className='py-3 text-center'>One Platform,</h3>
+          <h3 className="lg:whitespace-normal text-center whitespace-wrap w-[90%]">All the tools you need to build in Web3</h3>
+          <p className='p-2 font-normal text-lg whitespace-wrap mt-[24px] text-center'>Access ready-to-use APIs, SDKs, and AI-powered recommendations <br /> for simplified web3 development</p>
           <Link href='/welcome'><button className="rounded-full h-[56px] hover:bg-green-700 box-border bg-green-500 text-lg px-5 py-4 mt-[24px]">Join Waitlist</button></Link>
         </div>
       </div>
