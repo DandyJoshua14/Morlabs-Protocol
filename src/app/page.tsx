@@ -90,13 +90,13 @@ export default function Home() {
         <p className='text-center text-[2.4rem] my-[40px] font-bold'>Why developers need Morlabs</p>
 
         <div className='flex items-center justify-center m-2 space-x-5'>
-          <FaCircleArrowLeft className='text-white text-[3rem]' />
+          <FaCircleArrowLeft className='text-white md:text-[3rem] text-[2rem]' />
           <div className='h-[360px] text-white md:w-[600px] w-[95%] rounded-xl flex flex-col justify-center items-center' style={{ background: 'linear-gradient(90deg, #D0E6F5 0%, #FEAFD8 30%, #C482FA 60%)' }}>
             <Image alt='hourglass' src='/holographic hourglass.png' width={73} height={120} />
             <p className='text-center my-5'>Save Time</p>
             <p className='text-center'>Stop reinventing the wheel. <br /> Access pre-built APIs and SDKs to get your projects up <br /> and running in no time.</p>
           </div>
-          <FaCircleArrowRight className='text-white text-[3rem]' />
+          <FaCircleArrowRight className='text-white md:text-[3rem] text-[2rem]' />
         </div>
       </div>
 
