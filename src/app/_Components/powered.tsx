@@ -26,7 +26,7 @@ const Powered = () => {
                 </div>
             </div>
 
-            <div className='flex justify-center p-4 items-center flex-col text-white mt-[70px]'>
+            <div className='flex justify-center p-4 items-center flex-col text-white mt-[50px]'>
                 <p className='text-center text-[2.1rem] font-bold'>Building in web3 <br /> shouldn't be rocket science</p>
                 <p className='mt-[15px] text-[1rem] text-center'>Developers waste hours hunting for the right tools, struggling with integrations, <br /> and navigating the steep learning curve of Web3 development. <br /> The result? Slow progress, frustration, and missed opportunities.</p>
             </div>
