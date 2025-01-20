@@ -29,7 +29,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                 </div>
             </nav>
 
-            <nav className="flex justify-between w-full items-center md:hidden bg-black text-white mt-[30px] p-4">
+            <nav className="flex justify-between w-full items-center md:hidden bg-black text-white mt-[10px] p-4">
                 <div className="items-start">
                     <Image src="/morlabs-logo.png" alt="morlabs_logo" width={150} height={150} />
                 </div>
