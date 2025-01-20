@@ -10,7 +10,7 @@ const Powered = () => {
                 <Image src='/powered/8 - Meteora.png' alt='powered' width={35} height={35} className='absolute top-[17%] left-[23%] md:w-[50px] md:h-[50px]' />
                 <Image src='/powered/6 - Ellipsis.png' alt='powered' width={35} height={35} className='absolute top-[5%] left-[35%] md:w-[50px] md:h-[50px]' />
 
-                <Image src='/powered/5 - Sphere.png' alt='powered' width={35} height={35} className='absolute top-0 left-[46%] md:w-[50px] md:h-[50px]' />
+                <Image src='/powered/5 - Sphere.png' alt='powered' width={35} height={35} className='absolute md:top-0 top-[3%] left-[46%] md:w-[50px] md:h-[50px]' />
 
                 <Image src='/powered/raydium.png' alt='powered' width={35} height={35} className='absolute top-[7%] right-[32%] md:top-[5%] md:right-[35%] md:w-[50px] md:h-[50px]' />
                 <Image src='/powered/jupiter.png' alt='powered' width={35} height={35} className='absolute top-[17%] right-[23%] md:w-[50px] md:h-[50px]' />
