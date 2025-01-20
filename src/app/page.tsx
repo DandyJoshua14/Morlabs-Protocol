@@ -159,7 +159,7 @@ export default function Home() {
           </div>
           {openIndex === 0 && (
             <div className='p-5 text-white'>
-             <p> Morlabs is an open-source platform that provides developers with a suite of tools and services to build and deploy Web3 applications.</p>
+             <p> Morlabs is a platform offering APIs, SDKs, and AI-powered tools for simplified Web3 development.</p>
              </div>
           )}
         </div>
@@ -171,7 +171,7 @@ export default function Home() {
           </div>
           {openIndex === 1 && (
             <div className='p-5 text-white'>
-              <p>Morlabs is for developers who want to build Web3 applications faster and more efficiently.</p>
+              <p>Both experienced developers and beginner looking to streamline Web3 development processes..</p>
             </div>
           )}
         </div>
@@ -183,7 +183,7 @@ export default function Home() {
           </div>
           {openIndex === 2 && (
            <div className='p-5 text-white'>
-              <p>Morlabs is different because it provides a suite of tools and services that are easy to use and integrate into your project.</p>
+              <p>we combine ready-to-used tools with AI recommendation, bridging web2 simplicity with Web3 innovation.</p>
             </div>
           )}
         </div>
@@ -195,7 +195,7 @@ export default function Home() {
           </div>
           {openIndex === 3 && (
             <div className='p-5 text-white'>
-              <p>Morlabs is currently in development and will be available in the future.</p>
+              <p>The platform will be launched in Q1 2025.</p>
             </div>
           )}
         </div>
