@@ -7,13 +7,13 @@ const Powered = () => {
             <div className='flex justify-center items-center gap-x-10 relative h-[300px] w-[95%] md:w-[700px] bg-black'>
                 <Image src='/powered/1 - Helius.png' alt='powered' width={35} height={35} className='absolute top-[47%] md:left-[10%] left-[5%] md:w-[50px] md:h-[50px]' />
                 <Image src='/powered/3 - Solana FM.png' alt='powered' width={25} height={25} className='absolute top-[27%] left-[15%] md:w-[35px] md:h-[35px]' />
-                <Image src='/powered/8 - Meteora.png' alt='powered' width={35} height={35} className='absolute top-[17%] left-[23%] md:w-[50px] md:h-[50px]' />
+                <Image src='/powered/8 - Meteora.png' alt='powered' width={35} height={35} className='absolute top-[17%] md:left-[23%] left-[19%] md:w-[50px] md:h-[50px]' />
                 <Image src='/powered/6 - Ellipsis.png' alt='powered' width={35} height={35} className='absolute top-[5%] left-[35%] md:w-[50px] md:h-[50px]' />
 
                 <Image src='/powered/5 - Sphere.png' alt='powered' width={35} height={35} className='absolute md:top-0 top-[3%] left-[46%] md:w-[50px] md:h-[50px]' />
 
                 <Image src='/powered/raydium.png' alt='powered' width={35} height={35} className='absolute top-[7%] right-[32%] md:top-[5%] md:right-[35%] md:w-[50px] md:h-[50px]' />
-                <Image src='/powered/jupiter.png' alt='powered' width={35} height={35} className='absolute top-[17%] right-[23%] md:w-[50px] md:h-[50px]' />
+                <Image src='/powered/jupiter.png' alt='powered' width={35} height={35} className='absolute top-[17%] md:right-[23%] right-[19%] md:w-[50px] md:h-[50px]' />
                 <Image src='/powered/7 - Sonarwatch.png' alt='powered' width={20} height={35} className='absolute top-[27%] right-[15%] md:w-[30px] md:h-[50px]' />
                 <Image src='/powered/9 - Orca.png' alt='powered' width={35} height={35} className='absolute top-[47%] md:right-[10%] right-[5%] md:w-[50px] md:h-[50px]' />
 
