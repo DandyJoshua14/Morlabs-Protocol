@@ -12,6 +12,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
 
     return (
         <>
+         {/* WEB RESPONSIVENESS */}
             <nav className="bg-black md:flex px-10 sm:flex-row hidden py-5 justify-between items-center">
                 <div>
                     <div className="items-start">

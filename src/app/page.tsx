@@ -60,6 +60,7 @@ export default function Home() {
         )}
       </AnimatePresence>
 
+{/* Hero start */}
       <div className="mt-10 max-w-5xl mx-auto">
         <div className="px-2 md:text-[3.4rem] text-[2.7rem] font-bold font-bricolage text-center m-auto">
           <h3 className='py-3 text-center'>One Platform,</h3>
@@ -71,6 +72,7 @@ export default function Home() {
 
       <Powered />
 
+{/* hero ends */}
       <div className='flex flex-col items-center mt-[140px] justify-center space-y-5 w-[100%] bg-black'>
         <div className='border-y border-white h-[150px] flex items-center justify-center rounded-lg w-[90%]'>
           <p className='text-white font-bold text-center text-[2.5rem]'>Learn</p>
@@ -88,7 +90,7 @@ export default function Home() {
 
       <div className='mt-[140px] flex tex-white flex-col items-center justify-center'>
         <p className='text-center text-[2.4rem] my-[40px] font-bold'>Why developers need Morlabs</p>
-
+ {/* Slide Content */}
         <div className='flex items-center justify-center m-2 space-x-5'>
           <FaCircleArrowLeft className='text-white md:text-[3rem] text-[2rem]' />
           <div className='h-[360px] text-white md:w-[600px] w-[100%] rounded-xl flex flex-col justify-center items-center' style={{ background: 'linear-gradient(90deg, #D0E6F5 0%, #FEAFD8 30%, #C482FA 60%)' }}>
@@ -96,10 +98,11 @@ export default function Home() {
             <p className='text-center my-5'>Save Time</p>
             <p className='text-center'>Stop reinventing the wheel. <br /> Access pre-built APIs and SDKs to get your projects up <br /> and running in no time.</p>
           </div>
+          {/* Navigation Arrows */}
           <FaCircleArrowRight className='text-white md:text-[3rem] text-[2rem]' />
         </div>
       </div>
-
+ {/* Main features Section */}
       <div className='flex justify-center items-center'>
         <div className='h-auto w-[95%] border-white border-[1px] flex flex-col md:flex-row items-center justify-evenly rounded-xl mt-[80px] p-[40px]'>
           <div className='w-[70%] h-[100%] flex flex-col'>
@@ -120,14 +123,18 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* 3D Object */}
           <Image className="mt-7 md:mt-0" src='/crisscross form.png' alt='crisscross form' width={200} height={200} />
         </div>
       </div>
+
+      {/* how it works start */}
 
       <div className='flex-start mt-[100px]'>
         <p className='text-left text-white font-bold my-7 md:ml-14 ml-7 text-[1.7rem]'>How It Works</p>
 
       </div>
+      {/* cards */}
       <div className='flex items-center flex-col md:flex-row space-y-6 justify-evenly gap-x-3 mt-[40px]'>
         <div className='h-[300px] md:w-[370px] w-[95%] justify-center flex-col gap-y-10 items-center flex rounded-xl' style={{ background: 'linear-gradient(90deg, #000000 0%, #1AB479 90%)' }}>
           <GrSearch className='text-white text-[3rem]' />
@@ -142,6 +149,7 @@ export default function Home() {
           <p className='text-white text-center text-[1.5rem] font-bold'>Go live with web3 functionality</p>
         </div>
       </div>
+      {/* how its works ends */}
 
       <div className='flex items-center flex-col justify-center mt-[100px] relative'>
         <p className='text-white font-bold text-[2.6rem] text-center'>The future of Web3 development  is waiting. <br /> Are you in?</p>
@@ -149,7 +157,7 @@ export default function Home() {
         {/* <div className='w-[35%] h-[50%] absolute' style={{ background: 'radial-gradient(circle at center, #25FEAA 0%, #20DB93 40%, #169866 60%, rgba(0,0,0,1) 100%)' }}></div> */}
       </div>
 
-
+{/* faquently asked question starts */}
       <p className='text-white font-bold text-[2rem] text-center mt-[200px]'>Morlabs 101: What you need to know</p>
       <div className='flex flex-col space-y-4 mb-[170px] justify-center items-center mt-[30px]'>
         <div className='md:w-[800px] w-[95%] flex flex-col'>
@@ -200,6 +208,7 @@ export default function Home() {
           )}
         </div>
       </div>
+      {/* fequently asked quetions ends */}
 
       <Footer />
     </div>
