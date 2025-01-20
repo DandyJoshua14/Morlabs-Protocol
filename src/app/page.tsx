@@ -46,7 +46,7 @@ export default function Home() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black z-50 flex items-center justify-center"
           >
-            <div className="absolute top-8 mt-[40px] right-4 cursor-pointer text-xl" onClick={toggleMenu}>
+            <div className="absolute top-8 mt-[20px] right-4 cursor-pointer text-xl" onClick={toggleMenu}>
               <IoClose />
             </div>
             <ul className="text-white list-none flex flex-col items-center gap-y-8 text-xl">
@@ -91,7 +91,7 @@ export default function Home() {
 
         <div className='flex items-center justify-center m-2 space-x-5'>
           <FaCircleArrowLeft className='text-white md:text-[3rem] text-[2rem]' />
-          <div className='h-[360px] text-white md:w-[600px] w-[95%] rounded-xl flex flex-col justify-center items-center' style={{ background: 'linear-gradient(90deg, #D0E6F5 0%, #FEAFD8 30%, #C482FA 60%)' }}>
+          <div className='h-[360px] text-white md:w-[600px] w-[100%] rounded-xl flex flex-col justify-center items-center' style={{ background: 'linear-gradient(90deg, #D0E6F5 0%, #FEAFD8 30%, #C482FA 60%)' }}>
             <Image alt='hourglass' src='/holographic hourglass.png' width={73} height={120} />
             <p className='text-center my-5'>Save Time</p>
             <p className='text-center'>Stop reinventing the wheel. <br /> Access pre-built APIs and SDKs to get your projects up <br /> and running in no time.</p>
