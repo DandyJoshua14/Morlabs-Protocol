@@ -129,15 +129,15 @@ export default function Home() {
 
       </div>
       <div className='flex items-center flex-col md:flex-row space-y-6 justify-evenly gap-x-3 mt-[40px]'>
-        <div className='h-[300px] w-[370px] justify-center flex-col gap-y-10 items-center flex rounded-xl' style={{ background: 'linear-gradient(90deg, #000000 0%, #1AB479 90%)' }}>
+        <div className='h-[300px] md:w-[370px] w-[95%] justify-center flex-col gap-y-10 items-center flex rounded-xl' style={{ background: 'linear-gradient(90deg, #000000 0%, #1AB479 90%)' }}>
           <GrSearch className='text-white text-[3rem]' />
           <p className='text-white text-center text-[1.5rem] font-bold'>Browse SDKs & APIs</p>
         </div>
-        <div className='h-[300px] w-[370px] justify-center flex-col gap-y-10 items-center flex rounded-xl' style={{ background: 'linear-gradient(90deg, #000000 0%, #1AB479 90%)' }}>
+        <div className='h-[300px] md:w-[370px] w-[95%] justify-center flex-col gap-y-10 items-center flex rounded-xl' style={{ background: 'linear-gradient(90deg, #000000 0%, #1AB479 90%)' }}>
           <FiRefreshCw className='text-white text-[3rem]' />
           <p className='text-white text-center text-[1.5rem] font-bold'>Integrate seamlessly into your project</p>
         </div>
-        <div className='h-[300px] w-[370px] justify-center flex-col gap-y-10 items-center flex rounded-xl' style={{ background: 'linear-gradient(90deg, #000000 0%, #1AB479 90%)' }}>
+        <div className='h-[300px] md:w-[370px] w-[95%] justify-center flex-col gap-y-10 items-center flex rounded-xl' style={{ background: 'linear-gradient(90deg, #000000 0%, #1AB479 90%)' }}>
           <LuCloudUpload className='text-white text-[3rem]' />
           <p className='text-white text-center text-[1.5rem] font-bold'>Go live with web3 functionality</p>
         </div>
