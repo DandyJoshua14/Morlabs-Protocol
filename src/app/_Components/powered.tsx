@@ -57,8 +57,8 @@ const Powered = () => {
 
                     </div>
                 </div>
-                <Image className='absolute top-[20%] md:-left-[20%] left-0' src='/powered/pastel blue rocket in motion.png' alt='rocket image' height={80} width={55} />
-                <Image className='md:h-[120px] h-[85px] md:w-[85px] w-[55px] absolute top-[55%] right-0 md:-right-[20%] rotate-[-7deg]' src='/powered/glossy pastel blue rocket.png' alt='rocket image' height={120} width={85} />
+                <Image className='absolute top-[20%] md:-left-[20%] left-[3%]' src='/powered/pastel blue rocket in motion.png' alt='rocket image' height={80} width={55} />
+                <Image className='md:h-[120px] h-[85px] md:w-[85px] w-[55px] absolute top-[55%] right-[3%] md:-right-[20%] rotate-[-7deg]' src='/powered/glossy pastel blue rocket.png' alt='rocket image' height={120} width={85} />
 
                
 
