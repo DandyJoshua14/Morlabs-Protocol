@@ -10,9 +10,9 @@ const Powered = () => {
                 <Image src='/powered/8 - Meteora.png' alt='powered' width={35} height={35} className='absolute top-[17%] left-[23%] md:w-[50px] md:h-[50px]' />
                 <Image src='/powered/6 - Ellipsis.png' alt='powered' width={35} height={35} className='absolute top-[5%] left-[35%] md:w-[50px] md:h-[50px]' />
 
-                <Image src='/powered/5 - Sphere.png' alt='powered' width={35} height={35} className='absolute top-0 left-[46%] md:w-[50px] md:h-[50px]' />
+                <Image src='/powered/5 - Sphere.png' alt='powered' width={35} height={35} className='absolute md:top-0 top-[3%] left-[46%] md:w-[50px] md:h-[50px]' />
 
-                <Image src='/powered/raydium.png' alt='powered' width={40} height={40} className='absolute top-[5%] right-[35%] md:w-[50px] md:h-[50px]' />
+                <Image src='/powered/raydium.png' alt='powered' width={35} height={35} className='absolute top-[7%] right-[32%] md:top-[5%] md:right-[35%] md:w-[50px] md:h-[50px]' />
                 <Image src='/powered/jupiter.png' alt='powered' width={35} height={35} className='absolute top-[17%] right-[23%] md:w-[50px] md:h-[50px]' />
                 <Image src='/powered/7 - Sonarwatch.png' alt='powered' width={20} height={35} className='absolute top-[27%] right-[15%] md:w-[30px] md:h-[50px]' />
                 <Image src='/powered/9 - Orca.png' alt='powered' width={35} height={35} className='absolute top-[47%] md:right-[10%] right-[5%] md:w-[50px] md:h-[50px]' />
@@ -34,7 +34,7 @@ const Powered = () => {
 
             <div className='relative flex justify-center items-center'>
 
-                <div className='lg:h-[450px] pb-5 h-auto md:w-[500px] lg:w-[800px] p-4 w-[90%] mt-[80px] flex flex-col rounded-xl bg-white'>
+                <div className='lg:h-[450px] md:pb-5 h-auto md:w-[500px] lg:w-[800px] pb-14 p-4 w-[90%] mt-[80px] flex flex-col rounded-xl bg-white'>
                     <p className='text-black text-[2rem] text-center font-semibold pt-[50px]'>Leave the rocket science to NASA. <br /> We’ve got Web3 covered</p>
                     <p className='text-black text-[1rem] my-[25px] text-center'>MorLabs Protocol simplifies Web3 development with high-performance tools <br /> that save time, reduce friction, and help you build faster.</p>
                     <div className='flex justify-center items-center space-y-3 flex-col mt-[20px]'>
