@@ -43,7 +43,7 @@ const page = () => {
 
   async function handleSubmit(e: any) {
     e.preventDefault()
-    axios.post('http://localhost:5000/api/v1/register', {
+    axios.post('https://morlabs-protocol-backend.onrender.com/api/v1/register', {
       username,
       email_address, country
     })
