@@ -50,6 +50,7 @@ const page = () => {
       .then(function (response) {
         console.log(response);
         window.alert(response.data.message)
+        window.location.href = "/"
       })
       .catch(function (error) {
         console.log(error);
