@@ -41,7 +41,7 @@ const page = () => {
     console.log(data)
   }
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: any) {
     e.preventDefault()
     axios.post('http://localhost:5000/api/v1/register', {
       username,
