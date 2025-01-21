@@ -44,15 +44,15 @@ const Powered = () => {
                         </div>
                         <div className='flex items-center gap-x-3'>
                             <FaCircleCheck className='text-green-700' />
-                            <p className='text-black text-[0.8rem]'>Ready-to-use APIs for faster coding.</p>
+                            <p className='text-black text-[0.8rem]'>AI recommendations to streamline your workflow</p>
                         </div>
                         <div className='flex items-center gap-x-3'>
                             <FaCircleCheck className='text-green-700' />
-                            <p className='text-black text-[0.8rem]'>Ready-to-use APIs for faster coding.</p>
+                            <p className='text-black text-[0.8rem]'>SDKs designed for seamless dApp integration</p>
                         </div>
                         <div className='flex items-center gap-x-3'>
                             <FaCircleCheck className='text-green-700' />
-                            <p className='text-black text-[0.8rem]'>Ready-to-use APIs for faster coding.</p>
+                            <p className='text-black text-[0.8rem]'>Built on Solana for unmatched speed and scalability.</p>
                         </div>
 
                     </div>
@@ -60,7 +60,7 @@ const Powered = () => {
                 <Image className='absolute top-[20%] md:-left-[20%] left-[3%]' src='/powered/pastel blue rocket in motion.png' alt='rocket image' height={80} width={55} />
                 <Image className='md:h-[120px] h-[85px] md:w-[85px] w-[55px] absolute top-[55%] right-[3%] md:-right-[20%] rotate-[-7deg]' src='/powered/glossy pastel blue rocket.png' alt='rocket image' height={120} width={85} />
 
-               
+
 
             </div>
 

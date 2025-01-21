@@ -12,7 +12,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
 
     return (
         <>
-         {/* WEB RESPONSIVENESS */}
+            {/* WEB RESPONSIVENESS */}
             <nav className="bg-black md:flex px-10 sm:flex-row hidden py-5 justify-between items-center">
                 <div>
                     <div className="items-start">
@@ -24,7 +24,8 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                         <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">About</li>
                         <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">Features</li>
                         <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg ">How it Works</li>
-                        <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">Community</li>
+                        <a href="https://t.me/+h3znet1BenA4OWI0" target="_blank" rel="noopener"><li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">Community</li></a>
+
                         <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">Whitepaper</li>
                     </ul>
                 </div>

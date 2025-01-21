@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";;
 import Powered from "./_Components/powered";
-import { FaCircleArrowLeft, FaCircleArrowRight, FaCirclePlus} from "react-icons/fa6";
+import { FaCircleArrowLeft, FaCircleArrowRight, FaCirclePlus } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import Link from 'next/link'
 import { GrSearch } from "react-icons/gr";
@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className='bg-black min-h-[100vh] text-white pt-5'>
       <Header onMenuClick={toggleMenu} />
-      
+
       <AnimatePresence>
         {showMenu && (
           <motion.div
@@ -53,44 +53,47 @@ export default function Home() {
               <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg ">About</li>
               <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">Features</li>
               <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">How it Works</li>
-              <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">Community</li>
+              <a href="https://t.me/+h3znet1BenA4OWI0" target="_blank" rel="noopener"><li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">Community</li></a>
               <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">Whitepaper</li>
             </ul>
           </motion.div>
         )}
       </AnimatePresence>
 
-{/* Hero start */}
+      {/* Hero start */}
       <div className="mt-10 max-w-5xl mx-auto">
         <div className="px-2 md:text-[3.4rem] text-[2.7rem] font-bold font-bricolage text-center m-auto">
           <h3 className='py-3 text-center'>One Platform,</h3>
           <h3 className="lg:whitespace-normal text-center whitespace-wrap w-[90%]">All the tools you need to build in Web3</h3>
           <p className='p-2 font-normal text-lg whitespace-wrap mt-[24px] text-center'>Access ready-to-use APIs, SDKs, and AI-powered recommendations <br /> for simplified web3 development</p>
-          <Link href='/welcome'><button className="rounded-full h-[56px] hover:bg-green-700 box-border bg-green-500 text-lg px-5 py-4 mt-[24px]">Join Waitlist</button></Link>
+          <Link href='/waitlist'><button className="rounded-full h-[56px] hover:bg-green-700 box-border bg-green-500 text-lg px-5 py-4 mt-[24px]">Join Waitlist</button></Link>
         </div>
       </div>
 
       <Powered />
 
-{/* hero ends */}
-      <div className='flex flex-col items-center mt-[140px] justify-center space-y-5 w-[100%] bg-black'>
-        <div className='border-y border-white h-[150px] flex items-center justify-center rounded-lg w-[90%]'>
-          <p className='text-white font-bold text-center text-[2.5rem]'>Learn</p>
-        </div>
-        <div className='border-y border-white h-[150px] flex items-center rounded-lg justify-center w-[90%]'>
-          <p className='text-white font-bold text-center text-[2.5rem]'>Test</p>
-        </div>
-        <div className='border-y border-white h-[150px] flex items-center rounded-lg justify-center w-[90%]'>
-          <p className='text-white font-bold text-center text-[2.5rem]'>Integrate</p>
-        </div>
-        <div className='border-y border-white h-[150px] flex items-center rounded-lg justify-center w-[90%]'>
-          <p className='text-white font-bold text-center text-[2.5rem]'>Deploy</p>
+      {/* hero ends */}
+      <div id="howitworks">
+
+        <div className='flex flex-col items-center mt-[140px] justify-center space-y-5 w-[100%] bg-black'>
+          <div className='border-y border-white h-[150px] flex items-center justify-center rounded-lg w-[90%]'>
+            <p className='text-white font-bold text-center text-[2.5rem]'>Learn</p>
+          </div>
+          <div className='border-y border-white h-[150px] flex items-center rounded-lg justify-center w-[90%]'>
+            <p className='text-white font-bold text-center text-[2.5rem]'>Test</p>
+          </div>
+          <div className='border-y border-white h-[150px] flex items-center rounded-lg justify-center w-[90%]'>
+            <p className='text-white font-bold text-center text-[2.5rem]'>Integrate</p>
+          </div>
+          <div className='border-y border-white h-[150px] flex items-center rounded-lg justify-center w-[90%]'>
+            <p className='text-white font-bold text-center text-[2.5rem]'>Deploy</p>
+          </div>
         </div>
       </div>
 
       <div className='mt-[140px] flex tex-white flex-col items-center justify-center'>
         <p className='text-center text-[2.4rem] my-[40px] font-bold'>Why developers need Morlabs</p>
- {/* Slide Content */}
+        {/* Slide Content */}
         <div className='flex items-center justify-center m-2 space-x-5'>
           <FaCircleArrowLeft className='text-white md:text-[3rem] text-[2rem]' />
           <div className='h-[360px] text-white md:w-[600px] w-[100%] rounded-xl flex flex-col justify-center items-center' style={{ background: 'linear-gradient(90deg, #D0E6F5 0%, #FEAFD8 30%, #C482FA 60%)' }}>
@@ -102,7 +105,7 @@ export default function Home() {
           <FaCircleArrowRight className='text-white md:text-[3rem] text-[2rem]' />
         </div>
       </div>
- {/* Main features Section */}
+      {/* Main features Section */}
       <div className='flex justify-center items-center'>
         <div className='h-auto w-[95%] border-white border-[1px] flex flex-col md:flex-row items-center justify-evenly rounded-xl mt-[80px] p-[40px]'>
           <div className='w-[70%] h-[100%] flex flex-col'>
@@ -153,11 +156,11 @@ export default function Home() {
 
       <div className='flex items-center flex-col justify-center mt-[100px] relative'>
         <p className='text-white font-bold text-[2.6rem] text-center'>The future of Web3 development  is waiting. <br /> Are you in?</p>
-        <Link href='/welcome'><button className="rounded-full h-[56px] box-border bg-green-500 hover:bg-green-700 text-lg px-5 py-4 mt-[24px]">LFG! Join Waitlist</button></Link>
+        <Link href='/waitlist'><button className="rounded-full h-[56px] box-border bg-green-500 hover:bg-green-700 text-lg px-5 py-4 mt-[24px]">LFG! Join Waitlist</button></Link>
         {/* <div className='w-[35%] h-[50%] absolute' style={{ background: 'radial-gradient(circle at center, #25FEAA 0%, #20DB93 40%, #169866 60%, rgba(0,0,0,1) 100%)' }}></div> */}
       </div>
 
-{/* faquently asked question starts */}
+      {/* faquently asked question starts */}
       <p className='text-white font-bold text-[2rem] text-center mt-[200px]'>Morlabs 101: What you need to know</p>
       <div className='flex flex-col space-y-4 mb-[170px] justify-center items-center mt-[30px]'>
         <div className='md:w-[800px] w-[95%] flex flex-col'>
@@ -167,8 +170,8 @@ export default function Home() {
           </div>
           {openIndex === 0 && (
             <div className='p-5 text-white'>
-             <p> Morlabs is a platform offering APIs, SDKs, and AI-powered tools for simplified Web3 development.</p>
-             </div>
+              <p> Morlabs is a platform offering APIs, SDKs, and AI-powered tools for simplified Web3 development.</p>
+            </div>
           )}
         </div>
 
@@ -190,7 +193,7 @@ export default function Home() {
             <FaCirclePlus className='text-[1.8rem] cursor-pointer hover:text-green-500' onClick={() => toggleDropdown(2)} />
           </div>
           {openIndex === 2 && (
-           <div className='p-5 text-white'>
+            <div className='p-5 text-white'>
               <p>we combine ready-to-used tools with AI recommendation, bridging web2 simplicity with Web3 innovation.</p>
             </div>
           )}
