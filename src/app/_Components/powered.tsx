@@ -71,3 +71,33 @@ const Powered = () => {
 }
 
 export default Powered
+
+
+/**
+ * Powered Section
+ *
+ * This component displays a styled section that highlights partnerships and sponsors in a Web3 space.
+ * It features:
+ * - A half-circle layout of logos for various sponsors.
+ * - A tagline emphasizing backing by prominent entities in Web3.
+ * - A call-to-action section describing Web3 development challenges.
+ *
+ * **Structure**:
+ * - **Container**: Outer `div` provides layout and spacing (`mt-[120px] bg-black flex flex-col`).
+ * - **Logo Section**: Displays sponsor logos arranged in a half-circle format.
+ * - **Tagline Section**: Positioned near the top, it displays a tagline and sponsor names.
+ * - **Call-to-Action Section**: Contains a headline and description to highlight Web3's development challenges.
+ *
+ * **Tailwind Classes**:
+ * - Used for layout, spacing, and responsiveness (e.g., `flex`, `justify-center`, `gap-x-10`).
+ * - Media queries are used with `md:` for different screen sizes.
+ *
+ * Usage:
+ * ```tsx
+ * import Powered from "./Powered";
+ *
+ * const App = () => {
+ *   return <Powered />;
+ * };
+ * ```
+ */

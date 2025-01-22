@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Morlabs Chain is a Web3 platform focused on providing a comprehensive SDK and API directory for decentralized applications within the Solana ecosystem. This frontend repository serves as the user interface for interacting with various blockchain features, including wallets, tokens, smart contracts, and more.
+Morlabs Protocol is a Web3 platform focused on providing a comprehensive SDK and API directory for decentralized applications within the Solana ecosystem. This frontend repository serves as the user interface for interacting with various blockchain features, including wallets, tokens, smart contracts, and more.
 
 ## Table of Contents
 

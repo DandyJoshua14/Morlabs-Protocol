@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
+// morlabs logo
 const Logo = () => {
   return (
     <div className='left-10 flex items-center'>

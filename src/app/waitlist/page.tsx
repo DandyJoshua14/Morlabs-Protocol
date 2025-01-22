@@ -61,17 +61,23 @@ const page = () => {
 
     <>
       <div className='bg-black h-screen'>
+        {/* Logo Section */}
         <img src="morlabs-logo.png" alt="Morlabs Logo" className='p-3' onClick={() => { window.location.href = "/" }} />
+        {/* Form Section */}
         <form className='flex text-white flex-col w-full max-w-2xl p-4 justify-center items-center mx-auto gap-y-8'>
+          {/* Form Title */}
           <h3 className='text-2xl font-bold'>Join the Waitlist !</h3>
+          {/* Full Name Input */}
           <div className='w-full'>
             <label htmlFor="full-name">Full Name</label>
             <input id="full-name" placeholder='John Doe' onChange={(e) => { setUserName(e.target.value) }} className='w-full px-5 py-3 rounded-md bg-transparent border' />
           </div>
+          {/* Email Address Input */}
           <div className='w-full'>
             <label htmlFor="full-name">Email Address</label>
             <input id="full-name" placeholder='johndoe@example.com' type="email" onChange={(e) => { setEmailAddress(e.target.value) }} className='w-full px-5 py-3 rounded-md bg-transparent border' />
           </div>
+              {/* Country Selector */}
           <div className="w-full">
             <label htmlFor="country">Select a country:</label><br />
             <select className="bg-transparent w-full px-5 py-3 rounded-md border"
@@ -84,6 +90,7 @@ const page = () => {
                 <option key={index} className="bg-transparent text-black" value={country}>{country}</option>
               ))}
             </select>
+            {/* Submit Button */}
           </div>
           <button className='bg-green-700 py-4 px-6 rounded-md font-bold' onClick={(e) => { handleSubmit(e) }}>Submit</button>
         </form>
