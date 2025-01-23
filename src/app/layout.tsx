@@ -3,7 +3,7 @@ import { Montserrat, Roboto_Mono } from "next/font/google";
 
 import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL("https://morlabsprotocol.com"),
   keywords: ["morlabs", "morlabs protocol", "api and sdk", "best api and sdk", "transition from web2 to web3"],
   title: { default: "Morlabs Protocol", template: `%s | Morlabs Protocol` },
