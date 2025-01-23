@@ -1,23 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Roboto_Mono } from "next/font/google";
+
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://morlabsprotocol.com"),
-  keywords: ["morlabs", "morlabs protocol", "api and sdk", "best api and sdk", "transition from web2 to web3"],
-  title: { default: "Morlabs Protocol", template: `%s | Morlabs Protocol` },
-  openGraph: { description: "An API & SDK directory for developers" },
-};
 
 export default function RootLayout({
   children,
@@ -27,9 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.variable} ${robotoMono.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
