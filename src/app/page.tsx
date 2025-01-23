@@ -11,15 +11,11 @@ import Header from './_Components/Header';
 import Footer from './_Components/Footer';
 import Image from 'next/image';
 import { motion, AnimatePresence } from "framer-motion";
+import { metaData } from "./_Components/metadatafunc";
 
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://morlabsprotocol.com"),
-  keywords: ["morlabs", "morlabs protocol", "api and sdk", "best api and sdk", "transition from web2 to web3"],
-  title: { default: "Morlabs Protocol", template: `%s | Morlabs Protocol` },
-  openGraph: { description: "An API & SDK directory for developers" },
-};
+
+export const metadata = metaData
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
