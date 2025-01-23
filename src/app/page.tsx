@@ -11,11 +11,8 @@ import Header from './_Components/Header';
 import Footer from './_Components/Footer';
 import Image from 'next/image';
 import { motion, AnimatePresence } from "framer-motion";
-import { metaData } from "./_Components/metadatafunc";
 
 
-
-export const metadata = metaData
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
