@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { FaCircleCheck } from "react-icons/fa6";
 const Powered = () => {
     return (
-        <div className='mt-[120px] bg-black flex justify-center items-center flex-col relative'>
+        <div className='mt-[120px] bg-black flex justify-center items-center flex-col relative' id="features">
             <div className='flex justify-center items-center gap-x-10 relative h-[300px] w-[95%] md:w-[700px] bg-black'>
                 <Image src='/powered/1 - Helius.png' alt='powered' width={35} height={35} className='absolute top-[47%] md:left-[10%] left-[5%] md:w-[50px] md:h-[50px]' />
                 <Image src='/powered/3 - Solana FM.png' alt='powered' width={25} height={25} className='absolute md:top-[27%] top-[30%] md:left-[15%] left-[10%] md:w-[35px] md:h-[35px]' />
@@ -37,7 +37,7 @@ const Powered = () => {
                 <div className='lg:h-[450px] md:pb-5 h-auto md:w-[500px] lg:w-[800px] pb-14 p-4 w-[90%] mt-[80px] flex flex-col rounded-xl bg-white'>
                     <p className='text-black text-[2rem] text-center font-semibold pt-[50px]'>Leave the rocket science to NASA. <br /> We’ve got Web3 covered</p>
                     <p className='text-black text-[1rem] my-[25px] text-center'>MorLabs Protocol simplifies Web3 development with high-performance tools <br /> that save time, reduce friction, and help you build faster.</p>
-                    <div className='flex justify-center items-center space-y-3 flex-col mt-[20px]'>
+                    <div className='flex items-start justify-center mx-auto space-y-3 flex-col mt-[20px]'>
                         <div className='flex items-center gap-x-3'>
                             <FaCircleCheck className='text-green-700' />
                             <p className='text-black text-[0.8rem]'>Ready-to-use APIs for faster coding.</p>
