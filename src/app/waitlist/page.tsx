@@ -72,7 +72,7 @@ const page = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/v1/register", {
+      const response = await axios.post("https://morlabs-protocol-backend.onrender.com/api/v1/register", {
         username,
         email_address,
         country,
