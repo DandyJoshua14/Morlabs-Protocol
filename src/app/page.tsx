@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";;
 import Powered from "./_Components/powered";
-import { FaCircleArrowLeft, FaCircleArrowRight, FaCirclePlus } from "react-icons/fa6";
+import { FaCircleArrowDown, FaCircleArrowLeft, FaCircleArrowRight, FaCirclePlus } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import Link from 'next/link'
 import { GrSearch } from "react-icons/gr";
@@ -35,7 +35,7 @@ export default function Home() {
   };
 
   return (
-    <div className='bg-black min-h-[100vh] text-white pt-5'>
+    <div className='bg-black min-h-[100vh] text-white pt-5 scroll-smooth'>
       <Header onMenuClick={toggleMenu} />
 
       <AnimatePresence>
@@ -73,36 +73,35 @@ export default function Home() {
       <Powered />
 
       {/* hero ends */}
-      <div id="howitworks">
-
-        <div className='flex flex-col items-center mt-[140px] justify-center space-y-5 w-[100%] bg-black'>
-          <div className='border-y border-white h-[150px] flex items-center justify-center rounded-lg w-[90%]'>
-            <p className='text-white font-bold text-center text-[2.5rem]'>Learn</p>
-          </div>
-          <div className='border-y border-white h-[150px] flex items-center rounded-lg justify-center w-[90%]'>
-            <p className='text-white font-bold text-center text-[2.5rem]'>Test</p>
-          </div>
-          <div className='border-y border-white h-[150px] flex items-center rounded-lg justify-center w-[90%]'>
-            <p className='text-white font-bold text-center text-[2.5rem]'>Integrate</p>
-          </div>
-          <div className='border-y border-white h-[150px] flex items-center rounded-lg justify-center w-[90%]'>
-            <p className='text-white font-bold text-center text-[2.5rem]'>Deploy</p>
-          </div>
+      <div id="howitworks" className="flex justify-center items-center text-center">
+        <div className="hidden sm:flex sm:gap-10 sm:mt-[100px] sm:justify-center mx-auto sm:items-center">
+          <p className='text-white font-bold text-center text-3xl flex items-center gap-x-3'>Learn</p>
+          <FaCircleArrowRight className='text-white md:text-3xl text-3xl mx-auto' />
+          <p className='text-white font-bold text-center text-3xl'>Test</p><FaCircleArrowRight className='text-white md:text-3xl text-3xl' />
+          <p className='text-white font-bold text-center text-3xl'>Integrate</p><FaCircleArrowRight className='text-white text-3xl' />
+          <p className='text-white font-bold text-center text-3xl'>Deploy</p>
         </div>
+        <div className="block md:hidden mx-auto mt-8 space-y-10 items-center">
+          <p className='text-white font-bold text-center text-3xl'>Learn</p><FaCircleArrowDown className='text-white mx-auto md:text-[3rem] text-[2rem]' />
+          <p className='text-white font-bold text-center text-3xl'>Test</p><FaCircleArrowDown className='text-white md:text-[3rem] text-[2rem] mx-auto' />
+          <p className='text-white font-bold text-center text-3xl'>Integrate</p><FaCircleArrowDown className='text-white md:text-3xl mx-auto text-3xl' />
+          <p className='text-white font-bold text-center text-3xl'>Deploy</p>
+        </div>
+
       </div>
 
       <div className='mt-[140px] flex tex-white flex-col items-center justify-center'>
-        <p className='text-center text-[2.4rem] my-[40px] font-bold'>Why developers need Morlabs</p>
+        <p className='text-center text-[2.4rem] mb-[40px] font-bold'>Why developers need Morlabs</p>
         {/* Slide Content */}
         <div className='flex items-center justify-center m-2 space-x-5'>
-          <FaCircleArrowLeft className='text-white md:text-[3rem] text-[2rem]' />
+          {/* <FaCircleArrowLeft className='text-white md:text-[3rem] text-[2rem]' /> */}
           <div className='h-[360px] text-white md:w-[600px] w-[100%] rounded-xl flex flex-col justify-center items-center' style={{ background: 'linear-gradient(90deg, #D0E6F5 0%, #FEAFD8 30%, #C482FA 60%)' }}>
             <Image alt='hourglass' src='/holographic hourglass.png' width={73} height={120} />
             <p className='text-center my-5'>Save Time</p>
             <p className='text-center'>Stop reinventing the wheel. <br /> Access pre-built APIs and SDKs to get your projects up <br /> and running in no time.</p>
           </div>
           {/* Navigation Arrows */}
-          <FaCircleArrowRight className='text-white md:text-[3rem] text-[2rem]' />
+          {/* <FaCircleArrowRight className='text-white md:text-[3rem] text-[2rem]' /> */}
         </div>
       </div>
       {/* Main features Section */}
@@ -133,8 +132,8 @@ export default function Home() {
 
       {/* how it works start */}
 
-      <div className='flex-start mt-[100px]'>
-        <p className='text-left text-white font-bold my-7 md:ml-14 ml-7 text-[1.7rem]'>How It Works</p>
+      <div className='flex-start mt-[100px]' >
+        <p className='text-left text-white font-bold my-7 md:ml-14 ml-7 text-[1.7rem]' id="howitworks">How It Works</p>
 
       </div>
       {/* cards */}
@@ -161,7 +160,7 @@ export default function Home() {
       </div>
 
       {/* faquently asked question starts */}
-      <p className='text-white font-bold text-[2rem] text-center mt-[200px]'>Morlabs 101: What you need to know</p>
+      <p className='text-white font-bold text-[2rem] text-center mt-[200px]' id="about">Morlabs 101: What you need to know</p>
       <div className='flex flex-col space-y-4 mb-[170px] justify-center items-center mt-[30px]'>
         <div className='md:w-[800px] w-[95%] flex flex-col'>
           <div className='h-[70px] box-border flex items-center justify-between p-3 text-white border-white rounded-lg border-[0.5px]'>
@@ -214,6 +213,6 @@ export default function Home() {
       {/* fequently asked quetions ends */}
 
       <Footer />
-    </div>
+    </div >
   );
 }

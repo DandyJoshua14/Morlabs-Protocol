@@ -21,12 +21,12 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                 </div>
                 <div>
                     <ul className="text-white flex justify-between gap-x-8">
-                        <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">About</li>
-                        <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">Features</li>
-                        <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg ">How it Works</li>
+                        <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg"><a href="#about">About</a></li>
+                        <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg"><a href="#features">Features</a></li>
+                        <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg "><a href="#howitworks">How it Works</a></li>
                         <a href="https://t.me/+h3znet1BenA4OWI0" target="_blank" rel="noopener"><li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">Community</li></a>
 
-                        <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">Whitepaper</li>
+                        {/* <li className="cursor-pointer hover:bg-green-700 p-2 rounded-lg">Whitepaper</li> */}
                     </ul>
                 </div>
             </nav>
