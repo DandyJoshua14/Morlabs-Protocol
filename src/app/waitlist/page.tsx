@@ -84,7 +84,7 @@ const page = () => {
       setTimeout(() => {
         window.location.href = "/"
       }, 500);
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
       setModalMessage(error)
 
@@ -127,7 +127,7 @@ const page = () => {
             </select>
             {/* Submit Button */}
           </div>
-          <button className='bg-green-700 disabled:bg-gray-300 py-4 px-6 rounded-md font-bold' disabled={isButtonDisabled} onClick={(e) => { handleSubmit(e); this?.setState({ show: true }) }}>{isButtonDisabled ? "Please Wait..." : "Submit"}</button>
+          <button className='bg-green-700 disabled:bg-gray-300 py-4 px-6 rounded-md font-bold' disabled={isButtonDisabled} onClick={(e) => { handleSubmit(e) }}>{isButtonDisabled ? "Please Wait..." : "Submit"}</button>
         </form>
         <Modal handleClose={() => { setModalState(!showModal) }} isOpen={showModal}>
           <img src="/verified.png" alt="verified_icon" className='items-center w-[50px] h-[50px]' />

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import { ReactPortal } from "./ReactPortal"
 
 interface ModalProps {
     children?: React.ReactNode
