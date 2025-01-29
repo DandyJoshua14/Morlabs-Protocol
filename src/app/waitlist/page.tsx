@@ -1,10 +1,14 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Layout from './Layout'
 import "../globals.css";
 import CountrySelector from "../_Components/CountrySelector"
 import Whitelogo from '../_Components/Whitelogo';
 import axios from 'axios';
+import { Modal } from "../_Components/Modal";
+
+
+
 const page = () => {
   const countries = [
     "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
@@ -35,27 +39,58 @@ const page = () => {
   const [username, setUserName] = useState("")
   const [email_address, setEmailAddress] = useState("")
   const [country, setCountry] = useState("")
+  const [isButtonDisabled, setButtonState] = useState(false)
+  const [showModal, setModalState] = useState(false)
+  const [modalId, setModalId] = useState("")
+  const [modalTitle, setModalTitle] = useState("")
+  const [modalMessage, setModalMessage] = useState("")
+  const modalRef = useRef<HTMLDialogElement | null>(null)
 
-  function handleGetCountry(data: string) {
-    setCountry(data)
-    console.log(data)
-  }
 
+  useEffect(() => {
+    if (showModal) {
+      console.log("Modal should now be visible");
+    }
+  }, [showModal]); // This will trigger whenever `showModal` updates
+  useEffect(() => {
+    if (!username && !email_address && !country) {
+      setButtonState(false);
+      return; // Exit early
+    } else {
+      setButtonState(true);
+    }
+  }, [isButtonDisabled])
   async function handleSubmit(e: any) {
-    e.preventDefault()
-    axios.post('https://morlabs-protocol-backend.onrender.com/api/v1/register', {
-      username,
-      email_address, country
-    })
-      .then(function (response) {
-        console.log(response);
-        window.alert(response.data.message)
-        window.location.href = "/"
-      })
-      .catch(function (error) {
-        console.log(error);
+    e.preventDefault();
+    setButtonState(true);
+
+    console.log("Modal Id:", "modal_1");
+
+    if (!username || !email_address || !country) {
+      setButtonState(false);
+      return; // Exit early
+    }
+
+    try {
+      const response = await axios.post("http://localhost:5000/api/v1/register", {
+        username,
+        email_address,
+        country,
       });
 
+      console.log(response);
+      setModalMessage(response.data.message)
+      setModalState(true); // Ensure this updates the state
+      setTimeout(() => {
+        window.location.href = "/"
+      }, 500);
+    } catch (error) {
+      console.error(error);
+      setModalMessage(error)
+
+      // setModalState(true); // Open modal on error too
+      console.log(showModal)
+    }
   }
   return (
 
@@ -70,17 +105,17 @@ const page = () => {
           {/* Full Name Input */}
           <div className='w-full'>
             <label htmlFor="full-name">Full Name</label>
-            <input id="full-name" placeholder='John Doe' onChange={(e) => { setUserName(e.target.value) }} className='w-full px-5 py-3 rounded-md bg-transparent border' />
+            <input disabled={isButtonDisabled} required id="full-name" placeholder='John Doe' onChange={(e) => { setUserName(e.target.value) }} className='w-full px-5 py-3 rounded-md bg-transparent border' />
           </div>
           {/* Email Address Input */}
           <div className='w-full'>
             <label htmlFor="full-name">Email Address</label>
-            <input id="full-name" placeholder='johndoe@example.com' type="email" onChange={(e) => { setEmailAddress(e.target.value) }} className='w-full px-5 py-3 rounded-md bg-transparent border' />
+            <input disabled={isButtonDisabled} required type="email" id="full-name" placeholder='johndoe@example.com' onChange={(e) => { setEmailAddress(e.target.value) }} className='w-full px-5 py-3 rounded-md bg-transparent border' />
           </div>
-              {/* Country Selector */}
+          {/* Country Selector */}
           <div className="w-full">
             <label htmlFor="country">Select a country:</label><br />
-            <select className="bg-transparent w-full px-5 py-3 rounded-md border"
+            <select disabled={isButtonDisabled} className="bg-transparent w-full px-5 py-3 rounded-md border"
               id="country"
               value={country}
               onChange={(e) => { setCountry(e.target.value) }}
@@ -92,8 +127,12 @@ const page = () => {
             </select>
             {/* Submit Button */}
           </div>
-          <button className='bg-green-700 py-4 px-6 rounded-md font-bold' onClick={(e) => { handleSubmit(e) }}>Submit</button>
+          <button className='bg-green-700 disabled:bg-gray-300 py-4 px-6 rounded-md font-bold' disabled={isButtonDisabled} onClick={(e) => { handleSubmit(e); this?.setState({ show: true }) }}>{isButtonDisabled ? "Please Wait..." : "Submit"}</button>
         </form>
+        <Modal handleClose={() => { setModalState(!showModal) }} isOpen={showModal}>
+          <img src="/verified.png" alt="verified_icon" className='items-center w-[50px] h-[50px]' />
+          {modalMessage}
+        </Modal>
       </div>
     </>
 

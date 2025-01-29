@@ -11,6 +11,7 @@
   "dependencies": {
     "@fontsource/bricolage-grotesque": "^5.1.1",
     "@heroicons/react": "^2.2.0",
+    "@sweetalert/with-react": "^0.1.1",
     "@vercel/analytics": "^1.4.1",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.9",
@@ -21,12 +22,15 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert2-react": "^0.8.3",
     "swiper": "^11.2.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "daisyui": "^4.12.23",
     "eslint": "^9.17.0",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.1",
